@@ -122,7 +122,7 @@ Lire d'abord, à chaque vidéo : `$LIB/AGENTS.md` (Style and story, Workflow), `
    livre quand même le script tel quel et on le signale en une ligne au client.
 4. **Traitement** (`TREATMENT.md`, DIRECTOR.md §4) : 3 structures candidates et le choix ; logline ; benchmark ; shot list ;
    **beats horodatés (8 lignes max)** ; cue map ; table son ; design des sous-titres. Puis seulement, lire `DEMO.md` et la
-   démo (`sh .claude/skills/lemo-opuscar/scripts/setup.sh demo hd-2d`) pour en apprendre les techniques, jamais l'histoire.
+   démo (`. tools/env.sh && sh .claude/skills/lemo-opuscar/scripts/setup.sh demo hd-2d` : sans `env.sh` la bibliothèque serait clonée dans `~/lemo-opuscar`) pour en apprendre les techniques, jamais l'histoire.
 5. **Look** : rendre avec le vrai code les **4 stills** du playbook (hook, milieu, climax, outro) en contact sheet 2×2,
    vérifier contre `STYLE.md`, la charte et les zones sûres TikTok (§7). Avec personnage : model sheet du héros.
 6. **Production** (TECHNIQUE.md) : voix → `asr_check.py` jusqu'à exit 0 → score + foley → animation → mix.
@@ -131,6 +131,8 @@ Lire d'abord, à chaque vidéo : `$LIB/AGENTS.md` (Style and story, Workflow), `
    2 à 4 rounds max. `readcheck.mjs` doit passer. Test "une phrase" sans le son (§6).
 8. **Draft** 540×960 à 30 fps pour vérifier le rythme, puis **master** 1080×1920 à **60 fps** (le style anime la caméra et
    la lumière à chaque frame de sortie) ; `mux.sh` : −14 LUFS, true peak ≤ −1 dBTP, grain 0 (style pixel).
+   **Sans GPU** (VM cloud, SwiftShader : ~15 s/frame en supersampling ×2, ~4 s en ×1) : master à **30 fps** avec
+   `--q ss=1`, 3 workers (≈ 25 min pour 18 s). TikTok accepte très bien le 30 fps.
 9. **Compression TikTok** : `sh tools/compress.sh out/master.mp4 output/video-N_vK.mp4` (H.264 High, yuv420p BT.709,
    AAC 192k, +faststart). Vérifier : durée, 1080×1920, taille raisonnable (viser < 30 Mo pour 60 s).
 10. **Description TikTok** (`tt-caption-writer`) → `output/video-N_vK_tiktok.md` (format §8).
