@@ -1,0 +1,18 @@
+# Lemo-Opuscar library (cloned by tools/setup.sh) and local tool binaries
+.lemo-opuscar/
+.tools/
+tools/.env.local.sh
+
+# per-video working files (renders, frames, voice takes, review stills)
+video/*/out/
+video/*/stills/
+video/*/node_modules/
+video/*/.venv/
+*.tmp.mp4
+
+# secrets and system files
+.env
+.claude/skills/tiktok-marketing/.env
+__pycache__/
+*.pyc
+.DS_Store
