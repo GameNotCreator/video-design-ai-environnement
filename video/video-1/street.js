@@ -142,8 +142,8 @@ export function buildStreet() {
   // camera paths
   const P2 = track([[0, [2.0, 3.0, 4.2]], [1, [3.2, 13.5, 15.5]]]);           // wide: from hero-relative to world, blended below
   const L2 = track([[0, [0, .85, 0]], [1, [-1.4, 0, -5.5]]]);
-  const P3 = track([[6.4, [1.6, 3.6, 7.2]], [8.3, [.2, 2.7, 4.7]]]);
-  const L3 = track([[6.4, [-1.9, .9, -3.5]], [8.3, [-1.9, 1.15, -1.2]]]);
+  const P3 = track([[6.4, [-.7, 3.6, 7.0]], [8.3, [-1.3, 2.7, 4.7]]]);
+  const L3 = track([[6.4, [-2.4, .9, -3.5]], [8.3, [-1.9, 1.15, -1.2]]]);
   const _v = new THREE.Vector3();
 
   function update(t, shot, cam, post, renderer) {

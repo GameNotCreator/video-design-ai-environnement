@@ -65,8 +65,8 @@ function textCards(g, t) {
   g.textAlign = 'center'; g.textBaseline = 'alphabetic';
   const a1 = Math.min(seg(t, T.txt1, T.txt1 + .35), 1 - seg(t, T.txtOut - .35, T.txtOut));
   if (a1 > 0) {
-    g.save(); g.globalAlpha = a1; g.font = '700 88px Cinzel'; g.fillStyle = CREAM; g.shadowColor = 'rgba(0,0,0,.7)'; g.shadowBlur = 18;
-    spaced(g, TXT1.toUpperCase(), W / 2, 640 + (1 - eo(seg(t, T.txt1, T.txt1 + .45))) * 12, 7); g.restore();
+    g.save(); g.globalAlpha = a1; g.font = '700 72px Cinzel'; g.fillStyle = CREAM; g.shadowColor = 'rgba(0,0,0,.7)'; g.shadowBlur = 18;
+    spaced(g, TXT1.toUpperCase(), W / 2, 640 + (1 - eo(seg(t, T.txt1, T.txt1 + .45))) * 12, 5); g.restore();
   }
   const a2 = Math.min(seg(t, T.txt2, T.txt2 + .35), 1 - seg(t, T.txtOut - .35, T.txtOut));
   if (a2 > 0) {
