@@ -17,3 +17,8 @@ __pycache__/
 *.pyc
 .DS_Store
 *.log
+
+# music library: MP3s + analyses + catalogue are committed (every agent needs them); raw downloads are not
+assets/music/*.webm
+assets/music/*.m4a
+assets/music/*.part

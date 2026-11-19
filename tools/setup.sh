@@ -29,6 +29,9 @@ sh "$SKILL" | tail -3
 echo "== packages (core, voice, music)"
 sh "$SKILL" deps voice music 2>&1 | grep -vE '^\s*#|%' | tail -4
 
+# yt-dlp (skill youtube-audio: YouTube link → MP3), from PyPI
+PYTHONPATH="$ROOT/.tools/py" python3 -c 'import yt_dlp' 2>/dev/null || python3 -m pip install --quiet --disable-pip-version-check --target "$ROOT/.tools/py" yt-dlp || echo "! yt-dlp could not be installed"
+
 # Machine-specific settings, sourced by tools/env.sh
 {
   echo "# written by tools/setup.sh on $(date -u +%Y-%m-%dT%H:%MZ); machine-specific, not committed"

@@ -6,7 +6,7 @@ Vidéos TikTok pour [WeLockIn](https://welock.in), faites en code par des agents
 - Règles et pipeline : [`AGENTS.md`](AGENTS.md) (lu par Codex ; `CLAUDE.md` l'importe pour Claude Code)
 - Vidéos : [`video/`](video/), une par dossier `video-N/`, livrables dans `video-N/output/`
 - Marque : [`brand/welockin/`](brand/welockin/) (faits autorisés, palette, logo)
-- Assets fournis : [`assets/`](assets/)
+- Assets fournis : [`assets/`](assets/) · musiques : [`assets/music/`](assets/music/) (skill `youtube-audio`)
 - Playbook motion design (source) : [`docs/playbook-motion-design-fr.md`](docs/playbook-motion-design-fr.md)
 
 Installation : `sh tools/setup.sh`, puis `. tools/env.sh` avant les outils de rendu.

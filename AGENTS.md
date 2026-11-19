@@ -35,7 +35,7 @@ le client que pour quelque chose que lui seul peut fournir (un fait manquant, un
 avec un défaut raisonnable si c'est possible.
 
 Réponses par défaut au brief Lemo : langue anglais ; voix Kokoro anglaise (TTS offline) sauf voix fournie ;
-musique originale composée avec les outils `core/audio/` ; pas de storyboard à valider ; matériel = `brand/` + `assets/`.
+musique : **la piste la plus adaptée de la bibliothèque `assets/music/`** (§5 étape 6), sinon score synthétisé avec `core/audio/` ; pas de storyboard à valider ; matériel = `brand/` + `assets/`.
 
 ---
 
@@ -59,6 +59,7 @@ sh tools/setup.sh      # bibliothèque Lemo-Opuscar dans .lemo-opuscar/ + paquet
 |---|---|---|
 | `lemo-opuscar` | `.claude/skills/lemo-opuscar/` (lanceur) → bibliothèque dans `.lemo-opuscar/` | réalisation et production du film |
 | `tiktok-marketing` (8 sous-skills `tt-*`) | `.claude/skills/tiktok-marketing/` | hook (`tt-hook-scripter`), audit du script parlé (`tt-humanizer --mode audit`), description (`tt-caption-writer`) |
+| `youtube-audio` | `.claude/skills/youtube-audio/` | lien YouTube → MP3 (yt-dlp + ffmpeg) dans `assets/music/`, mesure BPM/drops, choix de la musique de chaque TikTok |
 
 Codex trouve les mêmes skills via les liens symboliques de `.agents/skills/`. Sous-skills TikTok :
 `.claude/skills/tiktok-marketing/skills/<tt-nom>/SKILL.md` (leurs chemins `../../references/` sont relatifs à ce dossier).
@@ -125,7 +126,11 @@ Lire d'abord, à chaque vidéo : `$LIB/AGENTS.md` (Style and story, Workflow), `
    démo (`. tools/env.sh && sh .claude/skills/lemo-opuscar/scripts/setup.sh demo hd-2d` : sans `env.sh` la bibliothèque serait clonée dans `~/lemo-opuscar`) pour en apprendre les techniques, jamais l'histoire.
 5. **Look** : rendre avec le vrai code les **4 stills** du playbook (hook, milieu, climax, outro) en contact sheet 2×2,
    vérifier contre `STYLE.md`, la charte et les zones sûres TikTok (§7). Avec personnage : model sheet du héros.
-6. **Production** (TECHNIQUE.md) : voix → `asr_check.py` jusqu'à exit 0 → score + foley → animation → mix.
+6. **Production** (TECHNIQUE.md) : voix → `asr_check.py` jusqu'à exit 0 → musique + foley → animation → mix.
+   **Musique** : pour chaque nouveau TikTok, choisir dans `assets/music/README.md` la piste la plus adaptée à l'arc,
+   au tempo et au moment fort du film (skill `youtube-audio`, "Choose the track") ; la couper *dans* le morceau sur les
+   temps forts, son drop sur le moment fort ; noter le choix dans `TREATMENT.md` et `CREDITS`, et "Utilisée dans" au
+   catalogue (varier d'une vidéo à l'autre). Piste absente ou réseau YouTube bloqué : score synthétisé, et le dire en une ligne.
 7. **Revue** (playbook étape D + DIRECTOR.md §11) : contact sheet **une frame par beat et 0,3 s après** ; note chaque plan
    /10 sur lisibilité, rythme, continuité, branding, hook ; corriger tout ce qui est **≤ 7**, ne pas toucher aux 9+ ;
    2 à 4 rounds max. `readcheck.mjs` doit passer. Test "une phrase" sans le son (§6).
