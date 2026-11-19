@@ -12,7 +12,8 @@ mkdir -p "$OUT"
 if ! PYTHONPATH="$ROOT/.tools/py" python3 -c 'import yt_dlp' 2>/dev/null; then
   python3 -m pip install --quiet --disable-pip-version-check --target "$ROOT/.tools/py" yt-dlp
 fi
-yt() { PYTHONPATH="$ROOT/.tools/py" python3 -m yt_dlp --no-playlist --no-warnings "$@"; }
+# YT_EXTRA: extra yt-dlp options, e.g. YT_EXTRA="--cookies-from-browser chrome" when YouTube asks to sign in
+yt() { PYTHONPATH="$ROOT/.tools/py" python3 -m yt_dlp --no-playlist --no-warnings $YT_EXTRA "$@"; }
 if [ "$1" = "--catalog" ]; then   # every YouTube link of assets/music/README.md not downloaded yet
   set -- $(grep -o 'https://www.youtube.com/watch?v=[A-Za-z0-9_-]*' "$OUT/README.md" | sort -u | while read -r u; do id=${u##*=}; ls "$OUT/$id"__*.mp3 >/dev/null 2>&1 || echo "$u"; done)
   [ $# -gt 0 ] || { echo "catalogue already downloaded"; exit 0; }
@@ -23,8 +24,10 @@ if [ "$1" = "--info" ]; then
   exit 0
 fi
 [ $# -ge 1 ] || { echo "usage: sh yt2mp3.sh [--info] <youtube-url> [<url> …]"; exit 2; }
+fail=0
 for u in "$@"; do
   yt -x --audio-format mp3 --audio-quality 0 --embed-metadata --write-info-json \
-     --restrict-filenames -o "$OUT/%(id)s__%(title).60B.%(ext)s" "$u"
+     --restrict-filenames -o "$OUT/%(id)s__%(title).60B.%(ext)s" "$u" || { echo "! failed: $u"; fail=1; }
 done
-ls -la "$OUT"/*.mp3
+ls -la "$OUT"/*.mp3 2>/dev/null
+exit $fail
