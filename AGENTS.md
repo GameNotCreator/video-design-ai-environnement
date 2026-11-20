@@ -121,6 +121,8 @@ Lire d'abord, à chaque vidéo : `$LIB/AGENTS.md` (Style and story, Workflow), `
    à l'écran (beaucoup regardent sans le son). Le texte du script est celui du client : on ne le réécrit pas ; on dérive le
    texte à l'écran et on passe `tt-humanizer --mode audit` sur les lignes parlées. Si l'audit trouve un vrai problème, on
    livre quand même le script tel quel et on le signale en une ligne au client.
+3b. **Ce qui marche** : relire `docs/performance-notes.md` (stats réelles TikTok/Shorts et règles qui en découlent :
+   frame 0 = toute la situation + hook déjà écrit, 15–20 s, enjeu/danger plutôt que morale, fin qui boucle).
 4. **Traitement** (`TREATMENT.md`, DIRECTOR.md §4) : 3 structures candidates et le choix ; logline ; benchmark ; shot list ;
    **beats horodatés (8 lignes max)** ; cue map ; table son ; design des sous-titres. Puis seulement, lire `DEMO.md` et la
    démo (`. tools/env.sh && sh .claude/skills/lemo-opuscar/scripts/setup.sh demo hd-2d` : sans `env.sh` la bibliothèque serait clonée dans `~/lemo-opuscar`) pour en apprendre les techniques, jamais l'histoire.
