@@ -40,15 +40,15 @@ export function buildRestaurant() {
   // diners in the back
   const dinerF = { sit: { pose: 'sit' }, talk: { pose: 'sittalk', mouth: 1 }, clap: { pose: 'wave', mouth: 1 } };
   const diners = [[-3.1, -2.0, false, 'teal', 'hairBlond'], [-2.1, -2.0, true, 'mustard', 'hairDark'], [2.1, -2.0, false, 'purple', 'hairGrey'], [3.1, -2.0, true, 'green', 'hairBrown']].map(([x, z, flip, top, hair]) => { const d = makePerson({ top, bottom: 'navy', hair, shoe: 'shoe' }, dinerF); d.root.position.set(x, 0, z); d.shadow.visible = false; scene.add(d.root); return { d, flip }; });
-  const bill = new THREE.Mesh(new THREE.PlaneGeometry(.16, .25), new THREE.MeshStandardMaterial({ map: billTex(), roughness: .9 })); bill.visible = false; scene.add(bill);
+  const bill = new THREE.Mesh(new THREE.PlaneGeometry(.24, .38), new THREE.MeshStandardMaterial({ map: billTex(), roughness: .9 })); bill.visible = false; scene.add(bill);
   const _v = new THREE.Vector3();
 
   function update(t, shot, cam, post, renderer) {
     // cameras
     if (t < T.waiter) { const u = seg(t, 0, T.waiter); cam.position.set(lerp(1.5, 1.3, u), lerp(1.75, 1.7, u), lerp(3.6, 3.3, u)); cam.lookAt(-.2, .72, .25); cam.fov = 44; }
     else if (t < T.leave) { const u = seg(t, T.waiter, T.leave); cam.position.set(lerp(1.6, 1.3, u), lerp(2.2, 2.1, u), lerp(3.4, 3.1, u)); cam.lookAt(.2, .95, .2); cam.fov = 48; }
-    else if (t < T.bill) { const u = seg(t, T.leave, T.bill); cam.position.set(lerp(1.4, 2.0, u), lerp(2.6, 3.0, u), lerp(4.4, 4.9, u)); cam.lookAt(1.0, .8, -.6); cam.fov = 50; }
-    else { const u = eio(seg(t, T.bill, T.bill + 1.2)); cam.position.set(lerp(.6, .3, u), lerp(1.7, 1.55, u), lerp(1.9, 1.6, u)); cam.lookAt(-.55, .95, .0); cam.fov = 44; }
+    else if (t < T.bill) { const u = seg(t, T.leave, T.bill); cam.position.set(lerp(.9, 1.9, u), lerp(2.1, 2.2, u), lerp(3.6, 3.8, u)); cam.lookAt(lerp(1.6, 3.4, u), 1.0, .5); cam.fov = 48; }
+    else { const u = eio(seg(t, T.bill, T.bill + 1.2)); cam.position.set(lerp(.9, .6, u), lerp(1.9, 1.75, u), lerp(2.3, 2.0, u)); cam.lookAt(-.45, .82, .1); cam.fov = 46; }
     cam.updateProjectionMatrix();
     // him
     hero.frame(t >= T.lookUp ? 'look' : (t % 2.9 < .1 ? 'blink' : 'phone')); hero.face(cam);
@@ -69,7 +69,7 @@ export function buildRestaurant() {
     // the room: talking, then clapping when she says yes
     diners.forEach(({ d, flip }, i) => { const clap = t >= 11.2 && t < 14.6; d.frame(clap ? (Math.floor(t * 5 + i) % 2 ? 'clap' : 'sit') : (Math.floor(t * 1.3 + i) % 3 === 0 ? 'talk' : 'sit')); d.face(cam, flip); });
     // the bill
-    bill.visible = t >= T.bill; const bu = eo(seg(t, T.bill, T.bill + .35)); bill.position.set(-.25, lerp(1.4, .775, bu), .1); bill.rotation.set(-Math.PI / 2, 0, .3);
+    bill.visible = t >= T.bill; const bu = eo(seg(t, T.bill, T.bill + .35)); bill.position.set(-.2, lerp(1.4, .8, bu), .22); bill.rotation.set(-Math.PI / 2, 0, .3);
     cands.forEach((c, i) => { const k = flick(t, i * 2.1); c.L.intensity = .9 * k; c.g.scale.setScalar(.2 * k); });
     post.dof.focus = cam.position.distanceTo(t < T.leave ? her.root.position.clone().setY(.9) : t < T.bill ? her.root.position.clone().setY(1.2) : hero.root.position.clone().setY(1)); post.dof.aper = 90; post.dof.maxCoc = 14;
     renderer.toneMappingExposure = 1.35; post.bloom.strength = .5; post.bloom.threshold = .85;
