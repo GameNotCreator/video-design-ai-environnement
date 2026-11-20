@@ -39,8 +39,8 @@ function drawPhone(P, E, x0, y0, dim = 1, sc = null) {
     const edge = i === 0 || i === 4 || j === 0 || j === 7; let c = edge ? bez : rows[j - 1];
     if (!edge && sc && j > 1) { const r = j - 2 + sh; c = r < 5 ? FEED[sc.c][r][i - 1] : FEED[(sc.c + 1) % 4][r - 5][i - 1]; }
     else if (!edge && j > 1 && i === 2 && j % 2 === 0) c = rows[1];
-    if (!edge) c = c.map(v => Math.round(v * (.55 + .45 * dim)));
-    P.set(x0 + i, y0 + j, c); if (!edge) E.set(x0 + i, y0 + j, c.map(v => Math.round(v * .5 * dim)));
+    if (!edge) c = c.map(v => Math.round(v * (.55 + .45 * dim) * (sc && j > 1 ? .8 : 1)));
+    P.set(x0 + i, y0 + j, c); if (!edge) E.set(x0 + i, y0 + j, c.map(v => Math.round(v * (sc ? .1 : .5) * dim)));
   }
   P.set(x0 + 2, y0, [60, 64, 76]);   // camera dot on the bezel
 }
