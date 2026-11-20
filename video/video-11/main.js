@@ -34,7 +34,7 @@ window.render = t => {
   if (shot.id === 'dinner') {
     V.fade.value = 1; V.sat.value = 1.05; V.contrast.value = .22; V.amt.value = .62;
     room.update(t, shot, camera, post, renderer);
-    if (!Q.has('notilt') && t < T.bill) { post.dof.tiltAmt = 14; post.dof.tiltC = tiltCenter(); post.dof.tiltW = .1; post.dof.tiltF = .3; post.dof.maxCoc = Math.max(post.dof.maxCoc, 20); V.sat.value *= 1.12; V.contrast.value = .28; }
+    if (!Q.has('notilt') && t >= T.waiter && t < T.bill) { post.dof.tiltAmt = 14; post.dof.tiltC = tiltCenter(); post.dof.tiltW = .1; post.dof.tiltF = .3; post.dof.maxCoc = Math.max(post.dof.maxCoc, 20); V.sat.value *= 1.12; V.contrast.value = .28; }
     post.composer.render();
   } else { renderer.setRenderTarget(null); renderer.setClearColor('#000'); renderer.clear(); }
   drawOverlay(g, t);

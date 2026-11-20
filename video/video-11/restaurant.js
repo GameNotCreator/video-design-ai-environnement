@@ -45,7 +45,7 @@ export function buildRestaurant() {
 
   function update(t, shot, cam, post, renderer) {
     // cameras
-    if (t < T.waiter) { const u = seg(t, 0, T.waiter); cam.position.set(lerp(1.5, 1.3, u), lerp(1.75, 1.7, u), lerp(3.6, 3.3, u)); cam.lookAt(-.2, .72, .25); cam.fov = 44; }
+    if (t < T.waiter) { const u = seg(t, 0, T.waiter); cam.position.set(lerp(-.15, -.1, u), lerp(1.45, 1.4, u), lerp(3.4, 3.2, u)); cam.lookAt(-.22, .72, .3); cam.fov = 44; }
     else if (t < T.leave) { const u = seg(t, T.waiter, T.leave); cam.position.set(lerp(1.6, 1.3, u), lerp(2.2, 2.1, u), lerp(3.4, 3.1, u)); cam.lookAt(.2, .95, .2); cam.fov = 48; }
     else if (t < T.bill) { const u = seg(t, T.leave, T.bill); cam.position.set(lerp(.9, 1.9, u), lerp(2.1, 2.2, u), lerp(3.6, 3.8, u)); cam.lookAt(lerp(1.6, 3.4, u), 1.0, .5); cam.fov = 48; }
     else { const u = eio(seg(t, T.bill, T.bill + 1.2)); cam.position.set(lerp(.9, .6, u), lerp(1.9, 1.75, u), lerp(2.3, 2.0, u)); cam.lookAt(-.45, .82, .1); cam.fov = 46; }
@@ -57,7 +57,7 @@ export function buildRestaurant() {
     let hx = .25, hframe = t % 3.3 < .1 ? 'kneel2' : 'kneel', hflip = true;
     if (t >= T.stand) { hframe = (t >= 8.7 && t < 10.9 && Math.floor(t * 3) % 2) ? 'talk' : 'stand'; hflip = false; }
     if (t >= T.leave) { const u = seg(t, T.leave, 14.6); hx = lerp(.25, 4.2, u); hframe = walkFrame(t); hflip = false; }
-    her.root.position.set(hx, 0, .55); her.frame(hframe); her.face(cam, hflip);
+    const kneeling = t < T.stand; her.root.position.set(hx, kneeling ? -.24 : 0, kneeling ? .8 : .55); her.frame(hframe); her.face(cam, hflip);
     ringG.visible = t < T.leave; if (t < T.stand) ringG.position.copy(her.local(31, 14)); else ringG.position.copy(her.local(24, 30));
     ringG.scale.setScalar(.2 * (1 + .3 * Math.sin(t * 7)));
     // waiter: walks in, helps her up, says yes, leaves with her
@@ -71,7 +71,7 @@ export function buildRestaurant() {
     // the bill
     bill.visible = t >= T.bill; const bu = eo(seg(t, T.bill, T.bill + .35)); bill.position.set(-.2, lerp(1.4, .8, bu), .22); bill.rotation.set(-Math.PI / 2, 0, .3);
     cands.forEach((c, i) => { const k = flick(t, i * 2.1); c.L.intensity = .9 * k; c.g.scale.setScalar(.2 * k); });
-    post.dof.focus = cam.position.distanceTo(t < T.leave ? her.root.position.clone().setY(.9) : t < T.bill ? her.root.position.clone().setY(1.2) : hero.root.position.clone().setY(1)); post.dof.aper = 90; post.dof.maxCoc = 14;
+    post.dof.focus = cam.position.distanceTo(t < T.leave ? her.root.position.clone().setY(.7) : t < T.bill ? her.root.position.clone().setY(1.2) : hero.root.position.clone().setY(1)); post.dof.aper = 90; post.dof.maxCoc = 14;
     renderer.toneMappingExposure = 1.35; post.bloom.strength = .5; post.bloom.threshold = .85;
   }
   return { scene, update, hero };

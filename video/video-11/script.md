@@ -10,3 +10,4 @@ frame 0 : HER (à genoux, bague) « Will you marry me? » déjà écrit · YOU �
 
 ## Journal des versions
 - v1 (2026-11-20) : première version. Musique : "I'll Do It (Instrumental)".
+- v2 (2026-11-20) : demandé : « rendre les téléphones plus discernables, améliorer la qualité de certains frames (angles, textes) ». Fait : téléphone redessiné ; première image de profil, elle plus bas que lui (à genoux) et nette, bague tendue ; noms des bulles agrandis.

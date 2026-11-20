@@ -27,9 +27,10 @@ function swimmer(f) {
   if (f === 'live' || f === 'sink') {
     const bx = f === 'sink' ? 0 : 0;
     if (f === 'live') arm(11, 20, 5, 8);
-    arm(21, f === 'sink' ? 28 : 20, 25, 6); P.rect(24, 4, 3, 3, S(.6, 0, 0));
-    for (let y = 0; y < 6; y++) { P.set(27, y, PAL.phone(.4, 0, y)); P.set(28, y, PAL.phone(.6, 0, y)); const c = PAL.glow(.7, 0, y); P.set(26, y, c); E.set(26, y, c); }
-    P.set(29, 1, [255, 60, 50]); E.set(29, 1, [255, 60, 50]);   // the red LIVE dot
+    arm(21, f === 'sink' ? 28 : 20, 25, 8); P.rect(23, 7, 3, 3, S(.6, 0, 0));
+    const bez = [20, 22, 30], rows = [[232, 240, 255], [255, 70, 60], [122, 168, 240], [74, 122, 216], [122, 168, 240], [42, 74, 144]];
+    for (let j = 0; j < 8; j++) for (let i = 0; i < 5; i++) { const edge = i === 0 || i === 4 || j === 0 || j === 7; const c = edge ? bez : (j === 2 && i > 1 ? [232, 240, 255] : rows[j - 1]); P.set(24 + i, j, c); if (!edge) E.set(24 + i, j, c.map(v => v >> 1)); }
+    P.set(25, 2, [255, 60, 50]); E.set(25, 2, [255, 60, 50]);   // the red LIVE dot
   }
   P.outline(.3); return { map: texOf(P.done()), em: texOf(E.done()) };
 }

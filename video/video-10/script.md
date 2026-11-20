@@ -10,3 +10,4 @@ frame 0 : la plage, le maître-nageur sur sa chaise + « IMAGINE IF · EP. 3 / D
 
 ## Journal des versions
 - v1 (2026-11-20) : première version. Musique : "Stranger Things Main Theme".
+- v2 (2026-11-20) : demandé : « rendre les téléphones plus discernables, améliorer la qualité de certains frames (angles, textes) ». Fait : téléphones redessinés (maître-nageur et nageuse : rectangle portrait, écran, point LIVE rouge lisible) ; noms des bulles agrandis.

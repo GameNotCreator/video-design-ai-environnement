@@ -10,3 +10,4 @@ frame 0 : l'avion dans les nuages + « IMAGINE IF · EP. 1 / Your flight is in g
 
 ## Journal des versions
 - v1 (2026-11-20) : première version. Musique : "Stranger Things Main Theme".
+- v2 (2026-11-20) : demandé : « rendre les téléphones plus discernables, améliorer la qualité de certains frames (angles, textes) ». Fait : téléphones redessinés (rectangle portrait, contour sombre, écran lisible) ; cockpit cadré pour voir les deux pilotes ; noms des bulles agrandis.

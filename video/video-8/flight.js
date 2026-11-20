@@ -65,7 +65,7 @@ export function buildFlight() {
     } else {
       // cameras: behind-left on both pilots → closer on the co-pilot → between the seats, out of the windshield
       cw.set(0, 200, 0);
-      if (t < 9.3) { const u = seg(t, T.cockpit, 9.3); cam.position.set(lerp(-2.5, -2.2, u), 200 + lerp(2.3, 2.15, u), lerp(2.7, 2.4, u)); cam.lookAt(lerp(1.5, 1.6, u), 201.15, 0); cam.fov = 50; }
+      if (t < 9.3) { const u = seg(t, T.cockpit, 9.3); cam.position.set(lerp(-1.7, -1.5, u), 200 + lerp(2.15, 2.05, u), lerp(3.3, 3.0, u)); cam.lookAt(lerp(.75, .85, u), 201.0, lerp(-.45, -.4, u)); cam.fov = 48; }
       else if (t < T.front) { const u = seg(t, 9.3, T.front); cam.position.set(lerp(-1.3, -1.1, u), 201.75, lerp(2.3, 2.1, u)); cam.lookAt(1.2, 201.1, .4); cam.fov = 46; }
       else { const u = eio(seg(t, T.front, T.impact)); cam.position.set(-.55, 201.25, 0); cam.lookAt(5, 201.1, 0); cam.fov = lerp(50, 44, u); }
       const k = seg(t, T.cockpit, T.impact), d = lerp(150, 3, Math.pow(k, 2.0));

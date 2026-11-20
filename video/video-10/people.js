@@ -22,6 +22,18 @@ export const PAL = {
   phone: R(['#0d0e14', '#1d1f2a', '#30333f']), glow: R(['#3d7fe0', '#7fb8ff', '#cfe6ff', '#ffffff']), gold: R(['#5a4210', '#9a7424', '#d8b04a', '#f4dc8a']),
 };
 
+// a readable portrait phone: dark bezel, lit screen with a status bar and feed rows, a camera dot (5 x 8 px)
+function drawPhone(P, E, x0, y0, dim = 1) {
+  const bez = [20, 22, 30], rows = [[232, 240, 255], [74, 122, 216], [122, 168, 240], [42, 74, 144], [122, 168, 240], [74, 122, 216]];
+  for (let j = 0; j < 8; j++) for (let i = 0; i < 5; i++) {
+    const edge = i === 0 || i === 4 || j === 0 || j === 7; let c = edge ? bez : rows[j - 1];
+    if (!edge && j > 1 && i === 2 && j % 2 === 0) c = rows[1];
+    if (!edge) c = c.map(v => Math.round(v * (.55 + .45 * dim)));
+    P.set(x0 + i, y0 + j, c); if (!edge) E.set(x0 + i, y0 + j, c.map(v => Math.round(v * .5 * dim)));
+  }
+  P.set(x0 + 2, y0, [60, 64, 76]);   // camera dot on the bezel
+}
+
 // look: { skin, hair, hairStyle: 'short'|'long'|'bun'|'bald', top, bottom, dress, gown, gradCap, veil, beard, glasses, cane, hunch, shoe, small }
 // pose: { pose: 'stand'|'walk'|'sit'|'phone'|'look'|'wave'|'push'|'kick'|'talk', step 0..3, bob, blink, mouth }
 function draw(P, E, L, p) {
@@ -98,12 +110,12 @@ function draw(P, E, L, p) {
   const sl = pts => pts.forEach(([x, y]) => { P.set(x, y, Body(.62, x, y)); P.set(x, y + 1, Body(.38, x, y)); });
   const hand = (x, y) => P.rect(x, y, 2, 2, S(.6, 0, 0));
   if (ph) {
-    sl([[21, top + 2], [22, top + 3], [22, top + 5], [23, top + 6], [24, top + 5]]); hand(24, top + 3);
-    for (let j = 0; j < 5; j++) for (let i = 0; i < 3; i++) P.set(25 + i - (j > 2 ? 1 : 0), top - 1 + j, PAL.phone(.5 - j * .08, i, j));
-    for (let j = 0; j < 5; j++) { const c = PAL.glow(.75 - j * .1, 0, j); P.set(24 - (j > 2 ? 1 : 0), top - 1 + j, c); E.set(24 - (j > 2 ? 1 : 0), top - 1 + j, c); }
+    sl([[21, top + 2], [22, top + 3], [22, top + 5], [23, top + 6], [24, top + 6]]);
+    drawPhone(P, E, 24, top - 5);
+    hand(23, top + 1); P.set(26, top, S(.7, 0, 0));   // fingers round the phone, thumb on the screen
   } else if (pose === 'look') {
     sl([[21, top + 2], [22, top + 4], [22, top + 6], [22, top + 8], [23, top + 10]]); hand(23, top + 12);
-    for (let j = 0; j < 4; j++) P.set(25, top + 11 + j, PAL.phone(.4, 0, j));
+    drawPhone(P, E, 24, top + 8, .35);
   } else if (pose === 'kneel') {
     sl([[21, top + 2], [23, top + 2], [25, top + 1], [27, top]]); hand(28, top - 1);
     P.rect(30, top - 2, 3, 3, PAL.black(.4, 0, 0)); P.set(31, top - 3, PAL.gold(.95, 0, 0)); E.set(31, top - 3, PAL.gold(.95, 0, 0)); P.set(31, top - 4, [255, 255, 255]); E.set(31, top - 4, [255, 255, 255]);

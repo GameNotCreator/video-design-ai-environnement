@@ -10,3 +10,4 @@ frame 0 : le bloc + « IMAGINE IF · EP. 2 / You're in good hands. » · NURSE �
 
 ## Journal des versions
 - v1 (2026-11-20) : première version. Musique : "Stranger Things Main Theme".
+- v2 (2026-11-20) : demandé : « rendre les téléphones plus discernables, améliorer la qualité de certains frames (angles, textes) ». Fait : téléphone du chirurgien redessiné (rectangle portrait, écran lisible) ; noms des bulles agrandis.
