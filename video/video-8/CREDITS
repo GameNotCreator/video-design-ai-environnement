@@ -1,0 +1,21 @@
+video-8 "Imagine if… #1: the pilot" — third-party material and licences
+
+Music
+- "Stranger Things Main Theme" — L'Orchestra Cinématique, https://www.youtube.com/watch?v=01qStKYB7ts — supplied by the client (catalogue assets/music); licence not stated on YouTube: rights not
+  verified. Used in mix.py: track 0.8 s under the flight (series theme), hard stop at the cut, then 0.8 s again under the end card.
+
+Code
+- px.js, kit.js, fx.js, post_ts.js, tools/render_range.mjs: from Lemo-Opuscar by Lemomo (LemoLab), styles/hd-2d/demo,
+  https://github.com/lemomo-ai/lemo-opuscar — MIT License, Copyright (c) 2026 Lemomo (LemoLab).
+- people.js (pixel characters): written for this studio, after the techniques of the same demo.
+- three.js r170 (MIT) and the lemo-opuscar core render tools (MIT), loaded from the library at render time.
+
+Fonts (SIL Open Font License 1.1, licence texts in fonts/)
+- Cinzel — Natanael Gama · EB Garamond — Georg Duffner, Octavio Pardo · Figtree — Erik Kennedy
+  Source: https://github.com/google/fonts/tree/main/ofl
+
+Images
+- assets/logo-mascot.png: the WeLockIn logo, from welock.in (the client's own brand).
+
+Sound effects
+- cabin hum, autopilot chime, terrain alarm (two-tone), wind, the cut: synthesized in mix.py (numpy, tools/mixkit.py, lemo-opuscar core/audio/sfx.py, MIT).
