@@ -1,0 +1,8 @@
+[
+  {"id": "h1", "text": "Two hours? Nope. Watch this.", "voice": "am_michael", "speed": 1.0},
+  {"id": "s1", "text": "Still locked. Seriously?", "voice": "am_michael", "speed": 0.95},
+  {"id": "s2", "text": "Deleted it. Still locked?", "voice": "am_michael", "speed": 1.0},
+  {"id": "s3", "text": "Okay. Laptop. Easy.", "voice": "am_michael", "speed": 1.0},
+  {"id": "s4", "text": "Oh, come on.", "voice": "am_michael", "speed": 0.95},
+  {"id": "s5", "text": "Fine. I'll study.", "voice": "am_michael", "speed": 0.95}
+]

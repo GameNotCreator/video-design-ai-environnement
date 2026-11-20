@@ -1,0 +1,26 @@
+video-12 "Can I cheat it? EP. 1" — third-party material and licences
+
+Music
+- "you lost - Scheming (Instrumental Slowed)" — Gijuri Drop, https://www.youtube.com/watch?v=BYGz4ttihm8 — supplied by the client
+  (catalogue assets/music, #6); licence not stated on YouTube: rights not verified. Used in mix.py from the track's start at film 1.2 s,
+  its drop (track 14.4 s) on the laptop's lock (film 15.6 s).
+
+Voice
+- Kokoro TTS (kokoro-v1.0, voice am_michael), Apache-2.0, run offline through the lemo-opuscar core/tts tools.
+
+Code
+- px.js, kit.js, fx.js, post_ts.js, tools/render_range.mjs: from Lemo-Opuscar by Lemomo (LemoLab), styles/hd-2d/demo,
+  https://github.com/lemomo-ai/lemo-opuscar — MIT License, Copyright (c) 2026 Lemomo (LemoLab).
+- people.js (pixel characters, from video-11, with the fez and new poses), screens.js, room.js, ui.js: written for this studio.
+- three.js r170 (MIT) and the lemo-opuscar core render tools (MIT), loaded from the library at render time.
+
+Fonts (SIL Open Font License 1.1, licence texts in fonts/)
+- Cinzel — Natanael Gama · EB Garamond — Georg Duffner, Octavio Pardo · Figtree — Erik Kennedy
+  Source: https://github.com/google/fonts/tree/main/ofl
+
+Images
+- assets/logo-mascot.png: the WeLockIn logo, from welock.in (the client's own brand).
+
+Sound effects
+- room tone, clicks, power-down, boot, lock thunks, poof, footsteps, lid, pages, lamp: synthesized in mix.py (numpy, tools/mixkit.py,
+  lemo-opuscar core/audio/sfx.py, MIT).
