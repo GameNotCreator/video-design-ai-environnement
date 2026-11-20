@@ -11,7 +11,7 @@ export const SHOTS = [{ id: 'march', a: 0, b: T.card }, { id: 'card', a: T.card,
 export const shotAt = t => SHOTS.find(s => t >= s.a && t < s.b) || SHOTS[SHOTS.length - 1];
 export const LINES = [];
 export const TXT1 = '4 billion years of evolution.', TXT2 = 'Undone by\none more video.';
-export const LINE = 'WeLockIn helps you focus on what matters.', PLAT = 'Available on iOS · Windows · macOS';
+export const LINE = 'WeLockIn helps you focus\non what matters.', PLAT = 'Available on iOS · Windows · macOS';
 // walking position (m): forward, slowing down, then dragging to a stop in the puddle
 export const XAt = t => 1.25 * Math.min(t, 8.3) + .8 * Math.max(0, Math.min(t, 12.4) - 8.3) + .25 * Math.max(0, Math.min(t, 14) - 12.4);
 export const MUSIC = { file: 'aQkfOkFvx2U' };
