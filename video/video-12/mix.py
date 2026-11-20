@@ -17,7 +17,7 @@ vo = np.zeros(N); vmask = np.zeros(N)
 for x in ev('voice'):
     w, sr = sf.read(os.path.join(HERE, 'out', 'voice', x['id'] + '.wav')); w = w if w.ndim == 1 else w.mean(1)
     w = soxr.resample(w, sr, SR); w = lp(hp(w, 110), 7000); w = compress(w / (np.abs(w).max() + 1e-9), thr=.3, ratio=3)
-    w = w / (np.sqrt(np.mean(w ** 2)) + 1e-9) * .12
+    w = w / (np.sqrt(np.mean(w ** 2)) + 1e-9) * .14
     s = int(x['t'] * SR); e = min(N, s + len(w)); vo[s:e] += w[:e - s]; vmask[max(0, s - 2400):min(N, e + 4800)] = 1
 
 # —— music: the track from its start at film 1.2, so its drop (14.4) lands on the laptop's lock (15.6) ——
@@ -29,7 +29,7 @@ g[(tt >= e1('stand')) & (tt < 15.55)] *= .8
 g[tt >= 15.55] = .42                                        # the drop: the laptop locks too
 g[tt >= e1('end')] = .36
 k = np.ones(int(.08 * SR)) / int(.08 * SR); g = np.convolve(g, k, 'same')
-duck = np.convolve(vmask, np.ones(int(.12 * SR)) / int(.12 * SR), 'same'); g *= 1 - .55 * duck   # ~7 dB under the lines
+duck = np.convolve(vmask, np.ones(int(.12 * SR)) / int(.12 * SR), 'same'); g *= 1 - .68 * duck   # ~10 dB under the lines
 mix += M * g[:, None]
 
 # —— room tone ——
