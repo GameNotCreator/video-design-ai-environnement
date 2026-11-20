@@ -135,7 +135,7 @@ export function buildNight() {
       // the hall: wide on the rows, then down on his blank sheet
       const hx = EX + heroDesk.x, hz = heroDesk.z;
       if (t < T.pens) { const u = eio(seg(t, T.exam, T.pens)); cam.position.set(EX + lerp(1.8, 1.4, u), lerp(2.3, 2.0, u), lerp(1.9, 1.3, u)); cam.lookAt(EX + lerp(-.2, .1, u), .8, lerp(-1.6, -1.0, u)); cam.fov = 52; }
-      else { const u = eo(seg(t, T.pens, T.pens + 1.0)); cam.position.set(hx + lerp(1.45, 1.3, u), lerp(1.45, 1.4, u), hz + lerp(.95, .8, u)); cam.lookAt(hx + .25, .7, hz - .05); cam.fov = 50; }
+      else { const u = eo(seg(t, T.pens, T.pens + 1.0)); cam.position.set(hx + lerp(1.5, 1.35, u), lerp(1.65, 1.6, u), hz + lerp(1.0, .85, u)); cam.lookAt(hx + .25, .74, hz - .05); cam.fov = 56; }
       cam.updateProjectionMatrix();
       students.forEach((s, i) => { s.frame(t >= T.pens ? 'w0' : (Math.floor(t * 6 + i * 1.7) % 2 ? 'w1' : 'w0')); s.face(cam); });
       heroX.frame(t < T.doze ? 'stare' : (Math.floor(t * 1.2) % 2 ? 'doze2' : 'doze')); heroX.face(cam);
@@ -146,7 +146,7 @@ export function buildNight() {
       proctor.root.position.set(EX + px, 0, t < T.pens ? -.65 : hz + .4); proctor.frame(pf); proctor.face(cam, pflip);
       // wall clock: 8:00 → 10:00
       const hrs = 8 + 2 * seg(t, T.exam, T.pens); mh.rotation.z = -(hrs % 1) * Math.PI * 2; hh.rotation.z = -(hrs / 12) * Math.PI * 2;
-      post.dof.focus = cam.position.distanceTo(_v.set(hx + (t < T.pens ? 0 : .25), .9, hz)); post.dof.aper = t < T.pens ? 30 : 22; post.dof.maxCoc = 10;
+      post.dof.focus = cam.position.distanceTo(t < T.pens ? _v.set(hx, .9, hz) : _v.set(hx + .4, .8, hz)); post.dof.aper = t < T.pens ? 30 : 12; post.dof.maxCoc = 10;
       renderer.toneMappingExposure = 1.1; post.bloom.strength = .3; post.bloom.threshold = .9;
       scene.background.set('#202020'); scene.fog = null;
     }
