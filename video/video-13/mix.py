@@ -18,14 +18,14 @@ vo = np.zeros(N); vmask = np.zeros(N)
 for x in ev('voice'):
     w, sr = sf.read(os.path.join(HERE, 'out', 'voice', x['id'] + '.wav')); w = w if w.ndim == 1 else w.mean(1)
     w = soxr.resample(w, sr, SR); w = lp(hp(w, 110), 7000); w = compress(w / (np.abs(w).max() + 1e-9), thr=.3, ratio=3)
-    w = w / (np.sqrt(np.mean(w ** 2)) + 1e-9) * .12
+    w = w / (np.sqrt(np.mean(w ** 2)) + 1e-9) * .14
     s = int(x['t'] * SR); e = min(N, s + len(w)); vo[s:e] += w[:e - s]; vmask[max(0, s - 2400):min(N, e + 4800)] = 1
 
 # —— music: in the track from 21.25 s, already playing at frame 0 ——
 mus = track('A9hzqHsocEA'); M = np.zeros((N, 2)); place(M, mus, 21.25, 0, DUR, 1.0, .12, 1.4)
 g = np.where(tt < TAP, .30, .40); g[tt >= END] = .36
 g = np.convolve(g, np.ones(int(.08 * SR)) / int(.08 * SR), 'same')
-duck = np.convolve(vmask, np.ones(int(.12 * SR)) / int(.12 * SR), 'same'); g *= 1 - .55 * duck
+duck = np.convolve(vmask, np.ones(int(.12 * SR)) / int(.12 * SR), 'same'); g *= 1 - .68 * duck
 mix += M * g[:, None]
 
 # —— rain on the window (the set's bed), a little softer once the lamp is on ——
