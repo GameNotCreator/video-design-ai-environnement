@@ -22,17 +22,33 @@ export const PAL = {
   phone: R(['#0d0e14', '#1d1f2a', '#30333f']), glow: R(['#3d7fe0', '#7fb8ff', '#cfe6ff', '#ffffff']), gold: R(['#5a4210', '#9a7424', '#d8b04a', '#f4dc8a']),
 };
 
-// a readable portrait phone: dark bezel, lit screen with a status bar and feed rows, a camera dot (5 x 8 px)
-function drawPhone(P, E, x0, y0, dim = 1) {
+// a readable portrait phone: dark bezel, lit screen with a status bar and a feed, a camera dot (5 x 8 px).
+// sc = { c, s }: which feed video is on screen (0..3) and the swipe step (0 rest, 1 mid-swipe, 2 end of swipe):
+// the feed slides up and the next video comes in from the bottom, so the thumb visibly scrolls.
+const FEED = [
+  [[[150, 200, 255], [150, 200, 255], [150, 200, 255]], [[120, 180, 250], [250, 222, 190], [120, 180, 250]], [[90, 150, 235], [60, 64, 90], [90, 150, 235]], [[40, 90, 180], [40, 90, 180], [40, 90, 180]], [[236, 236, 244], [236, 236, 244], [30, 50, 100]]],
+  [[[255, 214, 150], [255, 200, 130], [255, 214, 150]], [[250, 180, 110], [70, 44, 60], [250, 180, 110]], [[200, 120, 100], [70, 44, 60], [200, 120, 100]], [[90, 52, 70], [90, 52, 70], [90, 52, 70]], [[236, 236, 244], [236, 236, 244], [60, 34, 50]]],
+  [[[120, 230, 200], [120, 230, 200], [120, 230, 200]], [[80, 200, 170], [240, 240, 220], [80, 200, 170]], [[40, 150, 130], [240, 240, 220], [40, 150, 130]], [[20, 90, 80], [20, 90, 80], [20, 90, 80]], [[236, 236, 244], [236, 236, 244], [10, 60, 54]]],
+  [[[200, 160, 255], [200, 160, 255], [200, 160, 255]], [[160, 120, 240], [255, 240, 200], [160, 120, 240]], [[120, 80, 210], [120, 80, 210], [250, 190, 230]], [[60, 40, 130], [60, 40, 130], [60, 40, 130]], [[236, 236, 244], [236, 236, 244], [40, 26, 90]]],
+];
+const TINT = FEED.map(F => [0, 1, 2].map(k => F.slice(0, 4).flat().reduce((a, c) => a + c[k], 0) / 12));
+function drawPhone(P, E, x0, y0, dim = 1, sc = null) {
   const bez = [20, 22, 30], rows = [[232, 240, 255], [74, 122, 216], [122, 168, 240], [42, 74, 144], [122, 168, 240], [74, 122, 216]];
+  const sh = sc ? [0, 2, 4][sc.s] : 0;
   for (let j = 0; j < 8; j++) for (let i = 0; i < 5; i++) {
     const edge = i === 0 || i === 4 || j === 0 || j === 7; let c = edge ? bez : rows[j - 1];
-    if (!edge && j > 1 && i === 2 && j % 2 === 0) c = rows[1];
+    if (!edge && sc && j > 1) { const r = j - 2 + sh; c = r < 5 ? FEED[sc.c][r][i - 1] : FEED[(sc.c + 1) % 4][r - 5][i - 1]; }
+    else if (!edge && j > 1 && i === 2 && j % 2 === 0) c = rows[1];
     if (!edge) c = c.map(v => Math.round(v * (.55 + .45 * dim)));
     P.set(x0 + i, y0 + j, c); if (!edge) E.set(x0 + i, y0 + j, c.map(v => Math.round(v * .5 * dim)));
   }
   P.set(x0 + 2, y0, [60, 64, 76]);   // camera dot on the bezel
 }
+// scrolling clock: render(t) sets it once per frame (pure function of t); each phone user swipes on their own rhythm
+const CLOCK = { t: 0 }; let NEXT_ID = 0;
+export const setScrollTime = t => { CLOCK.t = t; };
+const SWIPE = 1.0;   // seconds per video in the feed (hold, then a quick swipe up)
+const PH_POSES = ['phone', 'standphone', 'walkphone', 'sitlaugh'];
 
 // look: { skin, hair, hairStyle: 'short'|'long'|'bun'|'bald', top, bottom, dress, gown, gradCap, veil, beard, glasses, cane, hunch, shoe, small }
 // pose: { pose: 'stand'|'walk'|'sit'|'phone'|'look'|'wave'|'push'|'kick'|'talk', step 0..3, bob, blink, mouth }
@@ -82,10 +98,10 @@ function draw(P, E, L, p) {
   P.ellipse(hx, hy, 5.4, 5.8, (x, y, dx, dy) => (L.hairStyle === 'bald' && dy < -.1 && dx > -.5) ? S(.7 - dy * .2, x, y) : Hr(.55 - dy * .3 - dx * .1, x, y));
   if (L.hairStyle === 'bun') P.ellipse(hx - 4, hy - 4, 2.4, 2.4, (x, y, dx, dy) => Hr(.6 - dy * .3, x, y));
   if (ph) {
-    P.ellipse(hx + 2.2, hy + 1.6, 3.6, 4.2, (x, y, dx, dy) => { const lit = dy > -.2 && dx > -.3; const c = lit ? PAL.cold(.6 + dx * .2 - dy * .1, x, y) : S(.45 + dx * .1, x, y); if (lit) E.set(x, y, [22, 34, 64]); return c; });
+    P.ellipse(hx + 2.2, hy + 1.6, 3.6, 4.2, (x, y, dx, dy) => { const lit = dy > -.2 && dx > -.3; let c = lit ? PAL.cold(.6 + dx * .2 - dy * .1, x, y) : S(.45 + dx * .1, x, y); const tn = p.scroll && TINT[p.scroll.c]; if (lit && tn) c = c.map((v, k) => Math.round(v * .6 + tn[k] * .4)); if (lit) E.set(x, y, tn ? tn.map(v => Math.round(v * .22)) : [22, 34, 64]); return c; });
     if (L.hairStyle !== 'bald') for (let x = hx - 2; x <= hx + 4; x++) P.set(x, hy - 2.6 + (x > hx + 2 ? 1 : 0), Hr(.6, x, 0));
     if (!p.blink) { P.set(hx + 3, hy + 1, INK); P.set(hx + 1, hy + 1, INK); }
-    P.set(hx + 5, hy + 2, PAL.cold(.75, 0, 0));
+    P.set(hx + 5, hy + 2, p.scroll ? TINT[p.scroll.c].map(v => Math.round(v * .9)) : PAL.cold(.75, 0, 0));
   } else {
     const fx = look ? hx + 1.2 : hx + 2.3;
     P.ellipse(fx, hy + 1, 3.7, 4.3, (x, y, dx, dy) => S(.62 - dy * .25 - Math.abs(dx) * .15, x, y));
@@ -111,8 +127,10 @@ function draw(P, E, L, p) {
   const hand = (x, y) => P.rect(x, y, 2, 2, S(.6, 0, 0));
   if (ph) {
     sl([[21, top + 2], [22, top + 3], [22, top + 5], [23, top + 6], [24, top + 6]]);
-    drawPhone(P, E, 24, top - 5);
-    hand(23, top + 1); P.set(26, top, S(.7, 0, 0));   // fingers round the phone, thumb on the screen
+    drawPhone(P, E, 24, top - 5, 1, p.scroll);
+    hand(23, top + 1);   // fingers round the phone
+    const ty = top - 5 + [5, 3, 1][p.scroll ? p.scroll.s : 0];   // thumb on the screen, sliding up as it swipes
+    P.set(26, ty, S(.8, 0, 0)); P.set(26, ty + 1, S(.62, 0, 0)); if (!p.scroll || p.scroll.s === 0) P.set(25, ty + 2, S(.55, 0, 0));
   } else if (pose === 'look') {
     sl([[21, top + 2], [22, top + 4], [22, top + 6], [22, top + 8], [23, top + 10]]); hand(23, top + 12);
     drawPhone(P, E, 24, top + 8, .35);
@@ -138,7 +156,12 @@ function draw(P, E, L, p) {
 }
 
 // Build a character: look + list of frame names → { root, frame(name), face(cam, flip) }
-export function makePerson(look, frames) {
+export function makePerson(look, frames0) {
+  const id = NEXT_ID++, frames = {};
+  for (const [k, p] of Object.entries(frames0)) {
+    if (PH_POSES.includes(p.pose) && !p.still) for (let c = 0; c < 4; c++) for (let s = 0; s < 3; s++) frames[`${k}~${c}${s}`] = { ...p, scroll: { c, s } };
+    else frames[k] = p;
+  }
   const names = Object.keys(frames), n = names.length, P = new PX(FW * n, FH), E = new PX(FW * n, FH);
   names.forEach((k, i) => {
     const p1 = new PX(FW, FH), e1 = new PX(FW, FH); draw(p1, e1, look, frames[k]); p1.outline(.3);
@@ -150,7 +173,12 @@ export function makePerson(look, frames) {
   const sh = blob(.36, .5); sh.position.y = .015; root.add(sh);
   return {
     root, mesh, shadow: sh,
-    frame(name) { const i = names.indexOf(name); if (i < 0) throw new Error('frame ' + name); tex.offset.x = em.offset.x = i / n; },
+    frame(name) {
+      if (!names.includes(name) && names.includes(name + '~00')) {
+        const u = (CLOCK.t + id * .43) / SWIPE, k = Math.floor(u), f = (u - k) * SWIPE;
+        name += `~${((k % 4) + 4) % 4}${f > SWIPE - .085 ? 2 : f > SWIPE - .17 ? 1 : 0}`;
+      }
+      const i = names.indexOf(name); if (i < 0) throw new Error('frame ' + name); tex.offset.x = em.offset.x = i / n; },
     face(cam, flip = false) { root.rotation.y = Math.atan2(cam.position.x - root.position.x, cam.position.z - root.position.z); mesh.scale.x = flip ? -1 : 1; },
     local(px, py) { const v = new THREE.Vector3((px - FW / 2) * SPX * mesh.scale.x, (FH - py) * SPX, .05); v.applyAxisAngle(new THREE.Vector3(0, 1, 0), root.rotation.y); return v.add(root.position); },
   };

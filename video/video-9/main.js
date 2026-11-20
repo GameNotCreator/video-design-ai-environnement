@@ -4,6 +4,7 @@ import { makePost } from './post_ts.js';
 import { DUR, T, shotAt, LINES } from './story.js';
 import { buildOR } from './surgery.js';
 import { drawOverlay, overlayReady, texts } from './ui.js';
+import { setScrollTime } from './people.js';
 
 const W = innerWidth || 1080, H = innerHeight || 1920, Q = new URLSearchParams(location.search);
 const SS = +(Q.get('ss') ?? 2);
@@ -30,6 +31,7 @@ function tiltCenter() {
 }
 window.DUR = DUR;
 window.render = t => {
+  setScrollTime(t);
   const shot = shotAt(t);
   if (shot.id === 'or') {
     V.fade.value = 1; V.sat.value = 1.05; V.contrast.value = .22; V.amt.value = .62;
