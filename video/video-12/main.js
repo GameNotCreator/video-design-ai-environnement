@@ -1,8 +1,8 @@
-// video-12 "Can I cheat it? EP. 1": page contract (render(t), DUR, READY, EV, TEXTS) for the lemo-opuscar render tools
+// video-12 v2 "Can I cheat it? EP. 1": page contract (render(t), DUR, READY, EV, TEXTS) for the lemo-opuscar render tools
 import * as THREE from 'three';
 import { makePost } from './post_ts.js';
-import { DUR, T, shotAt, LINES, TRIES } from './story.js';
-import { buildRoom } from './room.js';
+import { DUR, T, shotAt, TRIES } from './story.js';
+import { buildRoom } from './library.js';
 import { drawOverlay, overlayReady, texts } from './ui.js';
 
 const W = innerWidth || 1080, H = innerHeight || 1920, Q = new URLSearchParams(location.search);
@@ -43,13 +43,11 @@ window.render = t => {
 };
 window.TEXTS = texts;
 
-// sound events for mix.py (voice lines carry their start time v)
-const EV = LINES.map(L => ({ t: L.v, type: 'voice', id: L.id })).concat(LINES.filter(L => !L.instant).map(L => ({ t: L.a, type: 'chime' })));
+// sound events for mix.py (no voice in v2)
+const EV = [];
 TRIES.forEach(R => EV.push({ t: R.a, type: 'try', n: R.n }, { t: R.fail, type: 'fail', n: R.n }));
 EV.push({ t: T.press, type: 'press' }, { t: T.off, type: 'off' }, { t: T.boot, type: 'boot' }, { t: T.jiggle, type: 'jiggle' }, { t: T.poof, type: 'poof' }, { t: T.tapApp, type: 'tap' },
-  { t: T.stand, type: 'stand' }, { t: T.stand + .45, type: 'toss' }, { t: T.lid, type: 'lid' }, { t: T.lid + .3, type: 'desk' }, { t: T.book, type: 'book' }, { t: T.lamp, type: 'lamp' },
-  { t: T.txt, type: 'card' }, { t: T.txt2, type: 'card2' }, { t: T.card, type: 'end' });
-for (let k = 0; k < 4; k++) EV.push({ t: T.stand + .15 + k * .15, type: 'step' });
+  { t: T.down + .4, type: 'down' }, { t: T.lid, type: 'lid' }, { t: T.lid + .3, type: 'desk' }, { t: T.book, type: 'book' }, { t: T.txt, type: 'card' }, { t: T.card, type: 'end' });
 window.EV = EV.sort((a, b) => a.t - b.t);
 window.render(0);
 window.READY = true;

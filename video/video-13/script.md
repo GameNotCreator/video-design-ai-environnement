@@ -19,3 +19,8 @@
 
 ## Journal des versions
 - v1 (2026-11-20) : première version. Musique : « Acid Rain (Slowed) » (catalogue #7). Voix Kokoro `am_michael`.
+- v2 (2026-11-21) : demandé : « J'aime pas : le script, la voix et la scène. » Choix du client (questions) : pas de voix ; lieu public et
+  lumineux ; script court, presque muet (environ 15 s, tout passe par l'image, une seule phrase à la fin). Fait : café de jour (vitrine sur
+  la rue, comptoir, barista, clients) à la place du bureau de nuit ; plus de voix, de bulles ni d'étiquettes ; trois appareils plausibles
+  dans un café (iPhone, MacBook, iPad) au lieu de quatre ; une seule phrase à la fin : « Block it once. Locked everywhere. » ; carte de
+  fin : logo + « iOS · macOS · Windows ». 13,6 s. Musique inchangée. Les sources de la v1 sont dans l'historique git (commit 2a973eb).

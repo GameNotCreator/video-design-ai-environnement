@@ -68,3 +68,18 @@ covers a countdown) · calm + text 8 · end card 9.
 ## 10. Not the demo again
 Against the style demo (a quest across harbour, forest and storm): structure, opening, signature shot (four screens locking on the hits),
 camera path, score (a library track cut on its hits) and ending (lamp and end card): 6 of 6 differ.
+
+## v2 (2026-11-21): the client's notes and what changed
+Notes: "I don't like the script, the voice or the scene." The client then chose: no voice; a bright public place; a short, almost silent
+script (about 15 s, everything told by the picture, one sentence at the end).
+- **Set**: a café in daylight (shop window on the street, brick wall, counter with an espresso machine and a barista, chalk menu without
+  words, pendant bulbs, plants, two customers) replaces the desk at night. `cafe.js` replaces `desk.js`.
+- **Devices**: three that make sense on a café table: iPhone, MacBook, iPad (the Windows PC tower left with the desk; Windows stays on
+  the end card). No labels, no dialogue.
+- **Script**: frame 0 keeps the hook (HOW IT WORKS · EP. 1 / "One tap. Every screen."), then picture only: the screens ping, the tap,
+  the three screens lock one after the other with the same padlock and the same countdown; he lays the phone down and writes. One sentence
+  at the end: "Block it once. Locked everywhere." End card: logo + "iOS · macOS · Windows".
+- **Beats**: 0.0 hook · 2.0 push to the phone · 2.55 open session · 3.2 tap (hit 1) · 4.55 Mac · 5.9 iPad (hit 2) · 6.6 phone laid down ·
+  7.0 the sentence · 10.6 end card · 13.6 end.
+- **Sound**: no voice; café bed (murmur, cups, the espresso machine) instead of rain; pings per device until it locks; latch + rising
+  chord (C, E, G) on the three locks; "Acid Rain" unchanged (from track 21.25 s).

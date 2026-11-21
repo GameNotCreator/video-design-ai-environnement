@@ -20,3 +20,10 @@
 
 ## Journal des versions
 - v1 (2026-11-20) : première version. Musique : « Scheming (Instrumental Slowed) » (catalogue #6). Voix Kokoro `am_michael`.
+- v2 (2026-11-21) : demandé : « J'aime pas : le script, la voix et la scène. » Choix du client (questions) : pas de voix ; lieu public et
+  lumineux ; script court, presque muet (environ 15 s, tout passe par l'image, une seule phrase à la fin). Fait : bibliothèque universitaire
+  de jour (grandes fenêtres, rayons de soleil, étudiants qui lisent) à la place de la chambre de nuit ; plus de voix ni de bulles de
+  dialogue ; les trois essais sont montrés par trois pictogrammes (redémarrer, supprimer, laptop) barrés quand ils échouent ; gros plans
+  sur le téléphone et le laptop seulement, le héros plus petit dans le cadre ; une seule phrase à la fin : « Nothing turns off a Nuclear
+  lock. » ; carte de fin : logo + « iOS · macOS · Windows ». 17,6 s. Musique inchangée (coupée plus loin dans le morceau).
+  Les sources de la v1 sont dans l'historique git (commit 5dde125).

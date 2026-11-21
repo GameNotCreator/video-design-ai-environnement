@@ -26,9 +26,9 @@ export function padlock(P, x, y, open = false, col = COL.red) {
 export function lockScreen(P, remain, total, a = 9) {
   const W = P.w, H = P.h;
   P.rect(0, 0, W, H, COL.bg);
-  const ly = Math.round(H * .2), px = Math.floor((W - 9) / 2);
+  const ly = H > 30 ? Math.round(H * .2) : 2, px = Math.floor((W - 9) / 2);
   padlock(P, px, ly);
-  const s = hms(remain), tw = textW(s), ty = ly + 14 + (H > 30 ? 4 : 0);
+  const s = hms(remain), tw = textW(s), ty = ly + (H > 30 ? 18 : 12);
   digits(P, s, Math.floor((W - tw) / 2), ty, COL.cream);
   const bw = Math.min(W - 6, tw + 2), bx = Math.floor((W - bw) / 2), by = ty + 8, f = Math.max(0, Math.min(1, remain / total));
   if (by < H - 2) { P.rect(bx, by, bw, 1, COL.dim); P.rect(bx, by, Math.max(1, Math.round(bw * f)), 1, COL.red); }

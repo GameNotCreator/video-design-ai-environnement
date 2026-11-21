@@ -76,3 +76,18 @@ Against the style demo (`DEMO.md`: a quest across harbour, forest and storm to r
 room vs. a journey), opening (in the room, hook already written vs. chapter card and establishing wide), signature shot (the same padlock
 on the music drop vs. the relit lighthouse), camera path, score (a library track cut on its drop vs. an original score) and ending (a
 lamp and an end card vs. title over the harbour): 6 of 6 differ.
+
+## v2 (2026-11-21): the client's notes and what changed
+Notes: "I don't like the script, the voice or the scene." The client then chose: no voice; a bright public place; a short, almost silent
+script (about 15 s, everything told by the picture, one sentence at the end).
+- **Set**: a university library in daylight (three tall windows, sun beams with dust, bookcases, two students reading, one at the
+  shelves) replaces the bedroom at night. Daylight key, warm haze, no practicals needed. `library.js` replaces `room.js`.
+- **Script**: no dialogue. Frame 0 keeps the hook (CAN I CHEAT IT? · EP. 1 / "Can I beat a Nuclear lock?"). The three tries read as
+  three pixel pictograms on one plate (restart, delete, laptop); the current one lit and underlined, each crossed out in gold when it
+  fails. One sentence at the end: "Nothing turns off a Nuclear lock." End card: logo + "iOS · macOS · Windows".
+- **Shots**: medium (hero ~1/3 of the frame) → close on the phone only (his face out of frame) for tries 1 and 2 → the laptop for try 3 →
+  rising pull-back to the library. No more giant close-ups of the sprite.
+- **Beats**: 0.0 hook · 3.0 try 1 (3.6 off, 4.35 boot, 4.9 lock back) · 5.6 try 2 (6.55 poof, 7.2 lock) · 8.0 try 3 (8.55 lid, 9.9 lock =
+  drop) · 10.3 pull-back, 10.7 he opens his book · 11.1 the sentence · 14.6 end card · 17.6 end.
+- **Sound**: no voice. "Scheming" now enters from track 4.5 s (already playing at frame 0), its drop (14.4 s) on the laptop's lock (9.9);
+  near-silence while the phone is off; library room tone with a far page turn; same foley.
