@@ -2,7 +2,7 @@ video-15 "The statue" — third-party material and licences
 
 Music
 - "Stranger Things Main Theme" — L'Orchestra Cinématique, https://www.youtube.com/watch?v=01qStKYB7ts — supplied by the client (catalogue assets/music); licence not stated on YouTube: rights not
-  verified. Used in mix.py: track 0.8 s from film 0, hard stop on the plaque (12.2); track 0.8 s under the end card.
+  verified. Used in mix.py: track 0.8 s from film 0, hard stop on the plaque (12.0); track 0.8 s under the end card.
 
 Code
 - px.js, kit.js, fx.js, post_ts.js, tools/render_range.mjs: from Lemo-Opuscar by Lemomo (LemoLab), styles/hd-2d/demo,

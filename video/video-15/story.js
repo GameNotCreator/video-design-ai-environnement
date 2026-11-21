@@ -1,6 +1,6 @@
 // video-15 "The statue": timeline, single source of truth
 export const DUR = 23.1;
-export const T = { capOut: 3.2, kids: 5.9, carrot: 6.8, melt: 8.0, moss: 9.6, nest: 10.2, stone: 10.8, pigeons: 11.4, plaque: 12.2, plaqueOut: 15.2, txt: 15.2, txt2: 16.2, txtOut: 19.0, card: 19.0, logo: 19.1, line: 19.2, plat: 19.5 };
+export const T = { capOut: 3.2, kids: 5.9, carrot: 6.8, melt: 8.0, moss: 9.6, nest: 10.2, stone: 10.8, pigeons: 11.4, plaque: 12.0, plaqueOut: 15.2, txt: 15.2, txt2: 16.2, txtOut: 19.0, card: 19.0, logo: 19.1, line: 19.2, plat: 19.5 };
 export const SHOTS = [{ id: 'park', a: 0, b: T.txt - .2 }, { id: 'black', a: T.txt - .2, b: T.card }, { id: 'card', a: T.card, b: DUR }];
 export const shotAt = t => SHOTS.find(s => t >= s.a && t < s.b) || SHOTS[SHOTS.length - 1];
 export const SERIES = '', CAPTION = 'He sat down for five minutes.';
