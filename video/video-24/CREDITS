@@ -1,0 +1,21 @@
+video-24 "Right in front of you" — third-party material and licences
+
+Music
+- "Can You Hear The Music" — Ludwig Goransson, https://www.youtube.com/watch?v=4JZ-o3iAJv4 — supplied by the client (catalogue assets/music); licence not stated on YouTube: rights not
+  verified. Used in mix.py: track 14.98 s from film 0 (its rise, track 24.98 s, on the match at film 10.0), out at the cards; track 24.98 s under the end card.
+
+Code
+- px.js, kit.js, fx.js, post_ts.js, tools/render_range.mjs: from Lemo-Opuscar by Lemomo (LemoLab), styles/hd-2d/demo,
+  https://github.com/lemomo-ai/lemo-opuscar — MIT License, Copyright (c) 2026 Lemomo (LemoLab).
+- people.js, scene.js, ui.js, extra.js: written for this studio, after the techniques of the same demo.
+- three.js r170 (MIT) and the lemo-opuscar core render tools (MIT), loaded from the library at render time.
+
+Fonts (SIL Open Font License 1.1, licence texts in fonts/)
+- Cinzel — Natanael Gama · EB Garamond — Georg Duffner, Octavio Pardo · Figtree — Erik Kennedy
+  Source: https://github.com/google/fonts/tree/main/ofl
+
+Images
+- assets/logo-mascot.png: the WeLockIn logo, from welock.in (the client's own brand).
+
+Sound effects
+- train rumble, rail clacks, brakes, doors, match notification: synthesized in mix.py (numpy, tools/mixkit.py, lemo-opuscar core/audio/sfx.py, MIT).

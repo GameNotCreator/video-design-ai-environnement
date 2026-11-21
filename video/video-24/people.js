@@ -95,7 +95,7 @@ function draw(P, E, L, p) {
   // —— head ——
   const look = pose === 'look', down = ph || pose === 'write' || p.doze ? 1 : 0;
   const hx = 17 + down + (L.hunch ? 1 : 0), hy = 9 + by + down;
-  if (L.hairStyle === 'long' || L.hairStyle === 'bun') P.ellipse(hx - 2.5, hy + 3, 3.4, 6.5, (x, y, dx, dy) => Hr(.5 - dy * .2, x, y));
+  if (L.hairStyle === 'long' || L.hairStyle === 'bun') P.ellipse(hx - 3, hy + (L.hairUp ? 1 : 3), 3.4, L.hairUp ? 5 : 6.5, (x, y, dx, dy) => Hr(.5 - dy * .2, x, y));
   P.ellipse(hx, hy, 5.4, 5.8, (x, y, dx, dy) => (L.hairStyle === 'bald' && dy < -.1 && dx > -.5) ? S(.7 - dy * .2, x, y) : Hr(.55 - dy * .3 - dx * .1, x, y));
   if (L.hairStyle === 'bun') P.ellipse(hx - 4, hy - 4, 2.4, 2.4, (x, y, dx, dy) => Hr(.6 - dy * .3, x, y));
   if (ph) {
@@ -137,7 +137,7 @@ function draw(P, E, L, p) {
     P.set(26, ty, S(.8, 0, 0)); P.set(26, ty + 1, S(.62, 0, 0)); if (!p.scroll || p.scroll.s === 0) P.set(25, ty + 2, S(.55, 0, 0));
   } else if (pose === 'look') {
     sl([[21, top + 2], [22, top + 4], [22, top + 6], [22, top + 8], [23, top + 10]]); hand(23, top + 12);
-    drawPhone(P, E, 24, top + 8, .35);
+    if (!p.nophone) drawPhone(P, E, 24, top + 8, .35);
   } else if (pose === 'write') {   // forearm on the desk, pen moving
     const k = p.step ?? 0;
     sl([[21, top + 3], [23, top + 5], [25, top + 6], [27, top + 6]]); hand(28 + k, top + 5 + k);
