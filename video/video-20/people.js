@@ -184,7 +184,7 @@ export function makePerson(look, frames0) {
         name += `~${((k % 4) + 4) % 4}${f > SWIPE - .085 ? 2 : f > SWIPE - .17 ? 1 : 0}`;
       }
       const i = names.indexOf(name); if (i < 0) throw new Error('frame ' + name); tex.offset.x = em.offset.x = i / n; },
-    face(cam, flip = false) { root.rotation.y = Math.atan2(cam.position.x - root.position.x, cam.position.z - root.position.z); mesh.scale.x = flip ? -1 : 1; },
+    face(cam, flip = false) { root.updateMatrixWorld(); const w = new THREE.Vector3().setFromMatrixPosition(root.matrixWorld); root.rotation.y = Math.atan2(cam.position.x - w.x, cam.position.z - w.z); mesh.scale.x = flip ? -1 : 1; },
     local(px, py) { const v = new THREE.Vector3((px - FW / 2) * SPX * mesh.scale.x, (FH - py) * SPX, .05); v.applyAxisAngle(new THREE.Vector3(0, 1, 0), root.rotation.y); return v.add(root.position); },
   };
 }
