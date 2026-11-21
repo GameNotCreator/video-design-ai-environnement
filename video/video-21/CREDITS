@@ -1,0 +1,21 @@
+video-21 "Final call" — third-party material and licences
+
+Music
+- "Acid Rain (Slowed)" — lucii. - Topic, https://www.youtube.com/watch?v=A9hzqHsocEA — supplied by the client (catalogue assets/music); licence not stated on YouTube: rights not
+  verified. Used in mix.py: track 63.02 s from film 0 (drop at track 73.82 s on the last departure, film 10.8), hard stop on the agent (11.6); track 73.5 s under the end card.
+
+Code
+- px.js, kit.js, fx.js, post_ts.js, tools/render_range.mjs: from Lemo-Opuscar by Lemomo (LemoLab), styles/hd-2d/demo,
+  https://github.com/lemomo-ai/lemo-opuscar — MIT License, Copyright (c) 2026 Lemomo (LemoLab).
+- people.js, scene.js, ui.js, extra.js: written for this studio, after the techniques of the same demo.
+- three.js r170 (MIT) and the lemo-opuscar core render tools (MIT), loaded from the library at render time.
+
+Fonts (SIL Open Font License 1.1, licence texts in fonts/)
+- Cinzel — Natanael Gama · EB Garamond — Georg Duffner, Octavio Pardo · Figtree — Erik Kennedy
+  Source: https://github.com/google/fonts/tree/main/ofl
+
+Images
+- assets/logo-mascot.png: the WeLockIn logo, from welock.in (the client's own brand).
+
+Sound effects
+- terminal ambience, PA chimes, jets, board flaps: synthesized in mix.py (numpy, tools/mixkit.py, lemo-opuscar core/audio/sfx.py, MIT).
