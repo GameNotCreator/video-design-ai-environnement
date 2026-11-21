@@ -83,8 +83,8 @@ function draw(P, E, L, p) {
   // —— body ——
   const Body = L.gown ? PAL.black : Top;
   const hemY = L.dress || L.gown ? 47 : (sit ? 34 : waist + by + 1);
-  const hemL = L.dress ? 6 : L.gown ? 8 : 9, hemR = L.dress ? 27 : L.gown ? 25 : 24;
-  P.poly([[10, top], [23, top], [hemR, hemY], [hemL, hemY]], (x, y) => {
+  const bf = L.buff || 0, hemL = L.dress ? 6 : L.gown ? 8 : 9 - bf, hemR = L.dress ? 27 : L.gown ? 25 : 24 + bf;
+  P.poly([[10 - bf * 2, top], [23 + bf * 2, top], [hemR - bf, hemY], [hemL + bf, hemY]], (x, y) => {
     const u = (y - top) / Math.max(1, hemY - top), s = (x - hemL) / (hemR - hemL);
     let v = .7 - s * .35 + (1 - u) * .12; if (!L.dress && !L.gown && y >= hemY - 1) v = .35;
     if (L.dress && ((x + y) % 7 === 0)) v -= .12;
@@ -142,6 +142,11 @@ function draw(P, E, L, p) {
     const k = p.step ?? 0;
     sl([[21, top + 3], [23, top + 5], [25, top + 6], [27, top + 6]]); hand(28 + k, top + 5 + k);
     P.set(30 + k, top + 4 + k, hex('#2a2a34')); P.set(31 + k, top + 3 + k, hex('#2a2a34'));
+  } else if (pose === 'lift') {   // barbell overhead (step 1) or at the shoulders (step 0); thick arms when buff
+    const up = p.step ? 1 : 0, hy2 = up ? top - 9 : top - 2, arm = bf ? (x, y) => { P.set(x, y, S(.6, x, y)); P.set(x + 1, y, S(.45, x, y)); } : (x, y) => P.set(x, y, S(.6, x, y));
+    for (const sx of [10 - bf * 2, 23 + bf * 2]) for (let y = hy2 + 1; y < top + 2; y++) arm(sx + (sx < 16 ? -1 : 0), y);
+    for (let x = 3; x < 31; x++) P.set(x, hy2, hex('#3a3a42'));
+    for (const px of [3, 4, 28, 29]) for (let y = hy2 - 3; y < hy2 + 4; y++) P.set(px, y, hex('#1a1a20'));
   } else if (pose === 'kneel') {
     sl([[21, top + 2], [23, top + 2], [25, top + 1], [27, top]]); hand(28, top - 1);
     P.rect(30, top - 2, 3, 3, PAL.black(.4, 0, 0)); P.set(31, top - 3, PAL.gold(.95, 0, 0)); E.set(31, top - 3, PAL.gold(.95, 0, 0)); P.set(31, top - 4, [255, 255, 255]); E.set(31, top - 4, [255, 255, 255]);
