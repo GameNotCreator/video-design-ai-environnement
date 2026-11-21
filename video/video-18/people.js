@@ -102,6 +102,7 @@ function draw(P, E, L, p) {
     P.ellipse(hx + 2.2, hy + 1.6, 3.6, 4.2, (x, y, dx, dy) => { const lit = dy > -.2 && dx > -.3; let c = lit ? PAL.cold(.6 + dx * .2 - dy * .1, x, y) : S(.45 + dx * .1, x, y); const tn = p.scroll && TINT[p.scroll.c]; if (lit && tn) c = c.map((v, k) => Math.round(v * .6 + tn[k] * .4)); if (lit) E.set(x, y, tn ? tn.map(v => Math.round(v * .22)) : [22, 34, 64]); return c; });
     if (L.hairStyle !== 'bald') for (let x = hx - 2; x <= hx + 4; x++) P.set(x, hy - 2.6 + (x > hx + 2 ? 1 : 0), Hr(.6, x, 0));
     if (!p.blink) { P.set(hx + 3, hy + 1, INK); P.set(hx + 1, hy + 1, INK); }
+    if (L.beard) { const bl = typeof L.beard === 'number' ? L.beard : 2; for (let y = hy + 4; y < hy + 5 + bl; y++) for (let x = hx - 1 + (y - hy - 4) * .5; x < hx + 5 - (y - hy - 4) * .3; x++) P.set(Math.round(x), y, Hr(.5, x, y)); }
     P.set(hx + 5, hy + 2, p.scroll ? TINT[p.scroll.c].map(v => Math.round(v * .9)) : PAL.cold(.75, 0, 0));
   } else {
     const fx = look ? hx + 1.2 : hx + 2.3;
@@ -129,6 +130,7 @@ function draw(P, E, L, p) {
   if (ph) {
     sl([[21, top + 2], [22, top + 3], [22, top + 5], [23, top + 6], [24, top + 6]]);
     drawPhone(P, E, 24, top - 5, 1, p.scroll);
+    if (p.off) for (let j = 1; j < 7; j++) for (let i = 1; i < 4; i++) { P.set(24 + i, top - 5 + j, [14, 14, 20]); E.set(24 + i, top - 5 + j, [0, 0, 0]); }
     hand(23, top + 1);   // fingers round the phone
     const ty = top - 5 + [5, 3, 1][p.scroll ? p.scroll.s : 0];   // thumb on the screen, sliding up as it swipes
     P.set(26, ty, S(.8, 0, 0)); P.set(26, ty + 1, S(.62, 0, 0)); if (!p.scroll || p.scroll.s === 0) P.set(25, ty + 2, S(.55, 0, 0));
