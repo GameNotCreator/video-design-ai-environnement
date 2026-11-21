@@ -8,7 +8,7 @@ STUDIO=$(cd "$HERE/../.." && pwd -P); . "$STUDIO/tools/env.sh"
 FPS=${FPS:-30}; SS=${SS:-1}
 cd "$LIB"
 case "${1:-master}" in
-  stills) node core/render/still.mjs "$HERE" 0.0 5.5 9.0 11.8 14.0 15.0 17.0 21.5 --size 1080x1920 --q ss=$SS --out "$HERE/stills" ;;
+  stills) node core/render/still.mjs "$HERE" 0.0 4.5 9.5 12.5 14.5 16.0 20.0 --size 1080x1920 --q ss=$SS --out "$HERE/stills" ;;
   draft)  node core/render/video.mjs "$HERE" --size 540x960 --fps 30 --q ss=1 --out "$HERE/out/draft.mp4" ;;
   master) node core/render/events.mjs "$HERE" --size 1080x1920
           node core/render/readcheck.mjs "$HERE" --size 1080x1920
