@@ -1,0 +1,24 @@
+video-31 "Premiers pas" — third-party material and licences
+
+Music
+- "you lost - Scheming (Instrumental Slowed) (song for sad edit)" — Gijuri Drop, https://www.youtube.com/watch?v=BYGz4ttihm8
+  — supplied by the client (catalogue assets/music); licence not stated on YouTube: rights not verified.
+  Used in mix.py: track 8.7 s from film 0 (drop at track 14.4 s on the first jump, film 5.7) until the door shuts (14.2);
+  track 14.4 s again from the closing text (17.6) to the end.
+
+Code
+- px.js, kit.js, fx.js, post_ts.js, tools/render_range.mjs: from Lemo-Opuscar by Lemomo (LemoLab), styles/hd-2d/demo,
+  https://github.com/lemomo-ai/lemo-opuscar — MIT License, Copyright (c) 2026 Lemomo (LemoLab).
+- people.js, scene.js, ui.js, extra.js: written for this studio, after the techniques of the same demo.
+- three.js r170 (MIT) and the lemo-opuscar core render tools (MIT), loaded from the library at render time.
+
+Fonts (SIL Open Font License 1.1, licence texts in fonts/)
+- Cinzel — Natanael Gama · EB Garamond — Georg Duffner, Octavio Pardo · Figtree — Erik Kennedy
+  Source: https://github.com/google/fonts/tree/main/ofl
+
+Images
+- assets/logo-mascot.png: the WeLockIn logo, from welock.in (the client's own brand).
+- Her drawing (house, sun, three people): drawn in code in scene.js.
+
+Sound effects
+- room tone, steps, swells, door, chimes: synthesized in mix.py (numpy, tools/mixkit.py, lemo-opuscar core/audio/sfx.py, MIT).
