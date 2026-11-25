@@ -121,8 +121,16 @@ Lire d'abord, à chaque vidéo : `$LIB/AGENTS.md` (Style and story, Workflow), `
    à l'écran (beaucoup regardent sans le son). Le texte du script est celui du client : on ne le réécrit pas ; on dérive le
    texte à l'écran et on passe `tt-humanizer --mode audit` sur les lignes parlées. Si l'audit trouve un vrai problème, on
    livre quand même le script tel quel et on le signale en une ligne au client.
-3b. **Ce qui marche** : relire `docs/performance-notes.md` (stats réelles TikTok/Shorts et règles qui en découlent :
-   frame 0 = toute la situation + hook déjà écrit, 15–20 s, enjeu/danger plutôt que morale, fin qui boucle).
+3b. **Ce qui marche (boucle d'amélioration, à chaque nouvelle vidéo ou proposition de scripts)** :
+   1. Rafraîchir les stats : `. tools/env.sh && python3 tools/stats.py` → `docs/stats/<date>/youtube.csv` et `tiktok.csv`
+      (comptes : YouTube `@welockin-students`, TikTok `@welockin.study` ; Instagram `mystudy.skills` et Facebook
+      `Welockin` n'ont pas de stats publiques sans connexion : utiliser les exports Meta Business Suite si le client en
+      envoie). Si le réseau bloque, travailler avec la dernière date de `docs/stats/`.
+   2. Ajouter dans `docs/stats/videos.csv` les vidéos publiées depuis (dossier ↔ id YouTube ↔ id TikTok ↔ concept).
+   3. Mettre à jour `docs/performance-notes.md` : tableau, ce qui monte, ce qui descend, et ce que ça change aux règles
+      (comparer des vidéos publiées le même jour ; une vidéo de moins de 48 h n'est pas encore jugée).
+   4. Appliquer ses **règles de script** (section « Règles » du fichier) au choix des concepts et au traitement, et dire
+      au client en une ligne laquelle a guidé le choix.
 4. **Traitement** (`TREATMENT.md`, DIRECTOR.md §4) : 3 structures candidates et le choix ; logline ; benchmark ; shot list ;
    **beats horodatés (8 lignes max)** ; cue map ; table son ; design des sous-titres. Puis seulement, lire `DEMO.md` et la
    démo (`. tools/env.sh && sh .claude/skills/lemo-opuscar/scripts/setup.sh demo hd-2d` : sans `env.sh` la bibliothèque serait clonée dans `~/lemo-opuscar`) pour en apprendre les techniques, jamais l'histoire.
@@ -269,7 +277,7 @@ Characters: <nombre> / 2200
 - Viewer: PUBLIC_TO_EVERYONE
 - Comments: on · Duet: off · Stitch: off
 - Content disclosure: "Your brand" on (commercialContent + brandOrganic: on promeut notre propre produit)
-- Cover: <timestamp conseillé> (output/video-N_vK_poster.jpg)
+- Cover: <timestamp conseillé> (output/video-N_vK_poster.jpg) — à régler à la main sur chaque plateforme : sinon YouTube prend souvent la carte de fin (logo)
 - Sound: original audio
 
 ## On-screen hook (0–3 s)
