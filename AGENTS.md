@@ -62,7 +62,8 @@ sh tools/setup.sh      # bibliothèque Lemo-Opuscar dans .lemo-opuscar/ + paquet
 | `youtube-audio` | `.claude/skills/youtube-audio/` | lien YouTube → MP3 (yt-dlp + ffmpeg) dans `assets/music/`, mesure BPM/drops, choix de la musique de chaque TikTok |
 | `social-media-skills` (plugin claude.ai, Claude Code) | plugin « Social Media Skills » | idées et scripts : `tiktok-script`, `reels-script`, `youtube-shorts`, `short-form-video-script`, `hook-writer`, `viral-reverse-engineering` ; croissance : `tiktok-growth`, `instagram-growth`, `facebook-strategy` ; mesure : `analytics-and-reporting`, `experimentation-and-ab-testing`, `thumbnail-design` |
 | `marketing` (plugin claude.ai, Claude Code) | plugin « Marketing » d'Anthropic | `campaign-plan`, `performance-report`, `competitive-brief`, `brand-review` |
-| Metricool (connecteur claude.ai) | outils `mcp__Metricool_Social_Media_Management__*` | stats privées Instagram, Facebook, TikTok, YouTube (rétention, skip rate, saves, shares) et meilleure heure de publication : `docs/stats/metricool.md` |
+| Windsor.ai for Social Media (connecteur claude.ai) | outils `mcp__Windsor_ai_for_Social_Media__*` | **source principale** des stats privées : TikTok et YouTube reliés (rétention seconde par seconde, pays, sources de trafic) ; Instagram et Facebook à relier : `docs/stats/windsor.md` |
+| Metricool (connecteur claude.ai) | outils `mcp__Metricool_Social_Media_Management__*` | secours, aucun réseau relié au 25/11 ; meilleure heure de publication : `docs/stats/metricool.md` |
 
 Ces skills/plugins complètent `tiktok-marketing` sans le remplacer ; s'ils contredisent ce fichier, ce fichier gagne.
 Ils ne sont pas visibles par Codex (plugins et connecteurs claude.ai).
@@ -129,8 +130,10 @@ Lire d'abord, à chaque vidéo : `$LIB/AGENTS.md` (Style and story, Workflow), `
    livre quand même le script tel quel et on le signale en une ligne au client.
 3b. **Ce qui marche (boucle d'amélioration, à chaque nouvelle vidéo ou proposition de scripts)** :
    1. Rafraîchir les stats :
-      - **Metricool** (connecteur claude.ai, si les comptes y sont reliés) : rétention, skip rate, % vus en entier,
-        saves, shares des 4 plateformes. Procédure et ID des métriques : `docs/stats/metricool.md`.
+      - **Windsor.ai** (connecteur claude.ai) : rétention seconde par seconde, temps moyen, % vus en entier, pays et
+        sources de trafic de chaque vidéo TikTok et YouTube (et Instagram/Facebook une fois reliés). Procédure, appels
+        et fusion (`tools/windsor_merge.py`) : `docs/stats/windsor.md`. Essai limité aux 30 derniers jours.
+      - **Metricool** (si des comptes y sont reliés) : `docs/stats/metricool.md`.
       - Toujours en plus : `. tools/env.sh && python3 tools/stats.py` → `docs/stats/<date>/youtube.csv` et `tiktok.csv`
         (stats publiques : YouTube `@welockin-students`, TikTok `@welockin.study` ; Instagram `mystudy.skills` et
         Facebook `Welockin` n'en ont pas sans connexion). Si le réseau bloque, prendre la dernière date de `docs/stats/`.
