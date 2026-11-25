@@ -60,6 +60,12 @@ sh tools/setup.sh      # bibliothèque Lemo-Opuscar dans .lemo-opuscar/ + paquet
 | `lemo-opuscar` | `.claude/skills/lemo-opuscar/` (lanceur) → bibliothèque dans `.lemo-opuscar/` | réalisation et production du film |
 | `tiktok-marketing` (8 sous-skills `tt-*`) | `.claude/skills/tiktok-marketing/` | hook (`tt-hook-scripter`), audit du script parlé (`tt-humanizer --mode audit`), description (`tt-caption-writer`) |
 | `youtube-audio` | `.claude/skills/youtube-audio/` | lien YouTube → MP3 (yt-dlp + ffmpeg) dans `assets/music/`, mesure BPM/drops, choix de la musique de chaque TikTok |
+| `social-media-skills` (plugin claude.ai, Claude Code) | plugin « Social Media Skills » | idées et scripts : `tiktok-script`, `reels-script`, `youtube-shorts`, `short-form-video-script`, `hook-writer`, `viral-reverse-engineering` ; croissance : `tiktok-growth`, `instagram-growth`, `facebook-strategy` ; mesure : `analytics-and-reporting`, `experimentation-and-ab-testing`, `thumbnail-design` |
+| `marketing` (plugin claude.ai, Claude Code) | plugin « Marketing » d'Anthropic | `campaign-plan`, `performance-report`, `competitive-brief`, `brand-review` |
+| Metricool (connecteur claude.ai) | outils `mcp__Metricool_Social_Media_Management__*` | stats privées Instagram, Facebook, TikTok, YouTube (rétention, skip rate, saves, shares) et meilleure heure de publication : `docs/stats/metricool.md` |
+
+Ces skills/plugins complètent `tiktok-marketing` sans le remplacer ; s'ils contredisent ce fichier, ce fichier gagne.
+Ils ne sont pas visibles par Codex (plugins et connecteurs claude.ai).
 
 Codex trouve les mêmes skills via les liens symboliques de `.agents/skills/`. Sous-skills TikTok :
 `.claude/skills/tiktok-marketing/skills/<tt-nom>/SKILL.md` (leurs chemins `../../references/` sont relatifs à ce dossier).
@@ -122,10 +128,12 @@ Lire d'abord, à chaque vidéo : `$LIB/AGENTS.md` (Style and story, Workflow), `
    texte à l'écran et on passe `tt-humanizer --mode audit` sur les lignes parlées. Si l'audit trouve un vrai problème, on
    livre quand même le script tel quel et on le signale en une ligne au client.
 3b. **Ce qui marche (boucle d'amélioration, à chaque nouvelle vidéo ou proposition de scripts)** :
-   1. Rafraîchir les stats : `. tools/env.sh && python3 tools/stats.py` → `docs/stats/<date>/youtube.csv` et `tiktok.csv`
-      (comptes : YouTube `@welockin-students`, TikTok `@welockin.study` ; Instagram `mystudy.skills` et Facebook
-      `Welockin` n'ont pas de stats publiques sans connexion : utiliser les exports Meta Business Suite si le client en
-      envoie). Si le réseau bloque, travailler avec la dernière date de `docs/stats/`.
+   1. Rafraîchir les stats :
+      - **Metricool** (connecteur claude.ai, si les comptes y sont reliés) : rétention, skip rate, % vus en entier,
+        saves, shares des 4 plateformes. Procédure et ID des métriques : `docs/stats/metricool.md`.
+      - Toujours en plus : `. tools/env.sh && python3 tools/stats.py` → `docs/stats/<date>/youtube.csv` et `tiktok.csv`
+        (stats publiques : YouTube `@welockin-students`, TikTok `@welockin.study` ; Instagram `mystudy.skills` et
+        Facebook `Welockin` n'en ont pas sans connexion). Si le réseau bloque, prendre la dernière date de `docs/stats/`.
    2. Ajouter dans `docs/stats/videos.csv` les vidéos publiées depuis (dossier ↔ id YouTube ↔ id TikTok ↔ concept).
    3. Mettre à jour `docs/performance-notes.md` : tableau, ce qui monte, ce qui descend, et ce que ça change aux règles
       (comparer des vidéos publiées le même jour ; une vidéo de moins de 48 h n'est pas encore jugée).
