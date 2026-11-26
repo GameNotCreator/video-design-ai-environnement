@@ -38,5 +38,6 @@ planificateur Metricool avant son heure (lien `plannerUrl` donné à chaque fois
 
 ## Vérifier
 
-`getScheduledPosts` (3 jours) avant de produire : ne pas doubler un créneau. Après publication, les stats arrivent par
-Windsor (TikTok, YouTube) et Metricool (Facebook) : `docs/stats/windsor.md`, `docs/stats/metricool.md`.
+`getScheduledPosts` (3 jours) avant de produire : ne pas doubler un créneau. Un post publié y reste avec `status:
+PUBLISHED` et son `publicUrl` (le noter dans le journal). Stats : le TikTok **study_lock.in** et la page Facebook sont
+lus par **Metricool** (`docs/stats/metricool.md`) ; Windsor ne connaît que l'ancien TikTok @welockin.study et YouTube.
