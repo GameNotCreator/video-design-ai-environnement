@@ -11,14 +11,14 @@ planificateur Metricool avant son heure (lien `plannerUrl` donné à chaque fois
 | TikTok | study_lock.in | oui, en français |
 | Facebook | page 1426570190546010 | oui, en Reel, en français |
 | YouTube | @welockin-students (UCESYUmes8WTPj_a0-2hPmYw) | oui, en Short, **en anglais** (public anglophone) |
-| Instagram | welock.in | **non** (pas demandé par le client au 26/11) |
+| Instagram | welock.in | oui, en Reel, en français (autorisé par le client le 26/11) |
 | comptes perso (TikTok « Hedi Fourati », Threads), LinkedIn | — | **jamais** sans demande explicite |
 
 ## Rythme (demande du client le 26/11 : « Je veux 4 vidéos par jour »)
 
 - **4 vidéos par jour et par plateforme**, aux créneaux **10:00, 12:00, 16:00, 18:00** (Europe/Zurich ; les quatre
-  meilleurs créneaux TikTok donnés par Metricool). La même vidéo part en français sur TikTok + Facebook Reel et en
-  anglais en YouTube Short, au même créneau.
+  meilleurs créneaux TikTok donnés par Metricool). La même vidéo part en français sur TikTok + Facebook Reel + Instagram
+  Reel et en anglais en YouTube Short, au même créneau.
 - La tâche programmée tourne 4 fois par jour ; chaque passage produit **une** vidéo et la place sur le **premier créneau
   libre qui commence au moins 3 h plus tard** (`getScheduledPosts` pour voir les créneaux pris).
 
@@ -31,6 +31,7 @@ planificateur Metricool avant son heure (lien `plannerUrl` donné à chaque fois
   PUBLIC_TO_EVERYONE, `disableDuet`/`disableStitch` true, `commercialContentOwnBrand` true, `isAigc` false (choix par
   défaut annoncé au client), `videoCoverMilliseconds` = instant de la couverture.
 - Facebook : `facebookData: {"type": "REEL"}` ; même texte que TikTok.
+- Instagram : `instagramData: {"type": "REEL", "showReelOnFeed": true, "isAiGenerated": false}` ; même texte que TikTok.
 - YouTube : `youtubeData: {"title", "type": "short", "privacy": "public", "madeForKids": false, "tags": [...]}`, texte
   et titre en anglais, vidéo `_en`.
 - Texte : la légende et les hashtags de `output/video-N_vK_tiktok.md` (TikTok/Facebook) ou sa version anglaise (YouTube).
