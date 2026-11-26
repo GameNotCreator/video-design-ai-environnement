@@ -10,3 +10,4 @@
 | 2026-11-27 08:00 | video-35 v1 « Premier rendez-vous » (EN) | YouTube Short | 443721693 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=8708944918069527540 |
 | 2026-11-27 11:00 | video-31 v1 « Premiers pas » (FR) | TikTok, Facebook Reel, Instagram Reel | 443721763 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=702973927771490556 |
 | 2026-11-27 14:00 | video-26 v2 « Mirror » (FR) | TikTok, Facebook Reel, Instagram Reel | 443723796 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-2256923050115904442 |
+| 2026-11-27 17:00 | video-20 v2 « Fetch » (FR) | TikTok, Facebook Reel, Instagram Reel | 443730548 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-1148414635977653044 |
