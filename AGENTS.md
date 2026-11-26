@@ -297,7 +297,7 @@ Characters: <nombre> / 2200
 
 - 3 à 5 hashtags, portée mixte (un large type `#studytok`, un ou deux de niche `#focus` `#productivity`, un spécifique).
 - Pas de vocabulaire "IA" (`leverage`, `streamline`, `unlock`…), tirets cadratins quasi absents, noms propres en capitales.
-- Publication : **automatique, 4 vidéos par jour** (10:00, 12:00, 16:00, 18:00), par Metricool (demande du client le 26/11) : comptes, réglages et
+- Publication : **automatique, 6 vidéos par jour**, toutes les 3 h de 08:00 à 23:00, par Metricool (demandes du client le 26/11) : comptes, réglages et
   procédure dans `docs/posting.md`, journal dans `docs/posting-log.md`, file d'attente dans `docs/backlog.md`. Réseaux :
   TikTok, Facebook, Instagram (FR) et YouTube (EN). Jamais LinkedIn ni les comptes perso sans demande explicite du client.
 
