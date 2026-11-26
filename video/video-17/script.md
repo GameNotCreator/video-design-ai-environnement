@@ -13,3 +13,4 @@ frame 0 : l'amphi, une promo qui écrit, lui au premier rang sur son téléphone
 
 ## Journal des versions
 - v1 (2026-11-21) : première version. Musique : "Nightcrawler (Instrumental)".
+- v2 (2026-11-26) : version française (`?lang=fr`), mêmes images et même son, pour TikTok, Facebook et Instagram (demande du client : « programme plus de vidéos »).

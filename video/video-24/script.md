@@ -13,3 +13,4 @@ frame 0 : le wagon, lui à gauche sur son téléphone, elle en face qui lui sour
 
 ## Journal des versions
 - v1 (2026-11-21) : première version. Musique : "Can You Hear The Music".
+- v2 (2026-11-26) : version française (`?lang=fr`), mêmes images et même son, pour TikTok, Facebook et Instagram (demande du client : « programme plus de vidéos »).

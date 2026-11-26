@@ -13,3 +13,4 @@ frame 0 : sa chambre, lui devant un grand miroir doré, téléphone en main, son
 
 ## Journal des versions
 - v1 (2026-11-22) : première version. Musique : "I'll Do It (Instrumental)".
+- v2 (2026-11-26) : version française (`?lang=fr`), mêmes images et même son, pour TikTok, Facebook et Instagram (demande du client : « programme plus de vidéos »).

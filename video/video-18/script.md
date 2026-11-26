@@ -11,3 +11,4 @@ frame 0 : gros plan, lui sur un banc dans une rue animée, téléphone allumé, 
 
 ## Journal des versions
 - v1 (2026-11-21) : première version. Musique : "you lost - Scheming (Instrumental Slowed)".
+- v2 (2026-11-26) : version française (`?lang=fr`), mêmes images et même son, pour TikTok, Facebook et Instagram (demande du client : « programme plus de vidéos »).

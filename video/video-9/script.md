@@ -12,3 +12,4 @@ frame 0 : le bloc + « IMAGINE IF · EP. 2 / You're in good hands. » · NURSE �
 - v1 (2026-11-20) : première version. Musique : "Stranger Things Main Theme".
 - v2 (2026-11-20) : demandé : « rendre les téléphones plus discernables, améliorer la qualité de certains frames (angles, textes) ». Fait : téléphone du chirurgien redessiné (rectangle portrait, écran lisible) ; noms des bulles agrandis.
 - v3 (2026-11-20) : demandé : « faire la motion du scroll, on ne comprend pas qu'ils scrollent ». Fait : chaque écran de téléphone fait défiler un fil de vidéos (le pouce remonte, la vidéo suivante arrive par le bas, environ une par seconde, chaque personnage à son rythme) ; la lueur de l'écran sur le visage change de couleur à chaque vidéo. Son, durée et textes inchangés.
+- v4 (2026-11-26) : version française (`?lang=fr`), mêmes images et même son, pour TikTok, Facebook et Instagram (demande du client : « programme plus de vidéos »).

@@ -11,3 +11,4 @@ frame 0 : le salon, lui sur le canapé avec son téléphone, un chiot assis deva
 
 ## Journal des versions
 - v1 (2026-11-21) : première version. Musique : "Can You Hear The Music".
+- v2 (2026-11-26) : version française (`?lang=fr`), mêmes images et même son, pour TikTok, Facebook et Instagram (demande du client : « programme plus de vidéos »).
