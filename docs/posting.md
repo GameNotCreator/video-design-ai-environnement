@@ -1,7 +1,7 @@
 # Publication automatique (Metricool)
 
 Le client a demandé le 26/11 : « faire des posts tous les jours, régulièrement, de manière automatique ».
-Une tâche programmée (une fois par jour) produit et programme une vidéo ; le client peut annuler un post dans le
+Une tâche programmée (4 fois par jour) produit et programme une vidéo à chaque passage ; le client peut annuler un post dans le
 planificateur Metricool avant son heure (lien `plannerUrl` donné à chaque fois).
 
 ## Comptes (marque Metricool « Welockin », blogId 8360223, fuseau Europe/Zurich)
@@ -14,11 +14,13 @@ planificateur Metricool avant son heure (lien `plannerUrl` donné à chaque fois
 | Instagram | welock.in | **non** (pas demandé par le client au 26/11) |
 | comptes perso (TikTok « Hedi Fourati », Threads), LinkedIn | — | **jamais** sans demande explicite |
 
-## Rythme
+## Rythme (demande du client le 26/11 : « Je veux 4 vidéos par jour »)
 
-- Une vidéo par jour et par plateforme. TikTok + Facebook (FR) à **10:00** (meilleur créneau Metricool), YouTube (EN)
-  à **18:00** le même jour.
-- Toujours avoir le lendemain programmé : la tâche du jour produit la vidéo du lendemain.
+- **4 vidéos par jour et par plateforme**, aux créneaux **10:00, 12:00, 16:00, 18:00** (Europe/Zurich ; les quatre
+  meilleurs créneaux TikTok donnés par Metricool). La même vidéo part en français sur TikTok + Facebook Reel et en
+  anglais en YouTube Short, au même créneau.
+- La tâche programmée tourne 4 fois par jour ; chaque passage produit **une** vidéo et la place sur le **premier créneau
+  libre qui commence au moins 3 h plus tard** (`getScheduledPosts` pour voir les créneaux pris).
 
 ## Programmer un post (outil `createScheduledPost`)
 
