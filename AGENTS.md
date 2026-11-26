@@ -21,7 +21,7 @@ Ordre de priorité quand deux règles se contredisent :
 | **Un dossier par vidéo** | Chaque demande de nouvelle vidéo crée `video/video-N/` (N = numéro suivant libre, §3). |
 | **Style** | **Toujours** 2.5D Pixel Art (`hd-2d`) : https://lemomo-ai.github.io/lemo-opuscar/styles/hd-2d/ — sauf si le client demande explicitement autre chose. |
 | **Produit** | WeLockIn, bloqueur d'apps cross-platform fait par des étudiants pour des étudiants. iOS, Windows, macOS. Mode *hard lock-in* : impossible à désactiver avant la fin du timer. Faits autorisés : `brand/welockin/facts.md`. |
-| **Langue** | Vidéo en **anglais** (voix, sous-titres, textes à l'écran, description TikTok). On parle au client dans sa langue (français). |
+| **Langue** | Vidéo en **français** pour TikTok et Facebook, version **anglaise** pour YouTube (demande du client, 25–26/11 : public TikTok francophone, YouTube anglophone ; `docs/performance-notes.md`). Voix, sous-titres, textes à l'écran et description suivent la langue de la version. On parle au client dans sa langue (français). |
 | **Format** | **TikTok** : vertical 9:16, 1080×1920. |
 | **Livrables à chaque output** | 1) la vidéo **MP4 compressée** ; 2) la **description TikTok** qui va avec. |
 | **Script reçu = vidéo à générer** | Quand le client envoie un script, on produit la vidéo de bout en bout, sans aller-retour. |
@@ -297,7 +297,9 @@ Characters: <nombre> / 2200
 
 - 3 à 5 hashtags, portée mixte (un large type `#studytok`, un ou deux de niche `#focus` `#productivity`, un spécifique).
 - Pas de vocabulaire "IA" (`leverage`, `streamline`, `unlock`…), tirets cadratins quasi absents, noms propres en capitales.
-- Publication : on ne publie rien ; le client poste lui-même (pas de clé Publora configurée, tier 0 "draft only").
+- Publication : **automatique, une vidéo par jour**, par Metricool (demande du client le 26/11) : comptes, réglages et
+  procédure dans `docs/posting.md`, journal dans `docs/posting-log.md`, file d'attente dans `docs/backlog.md`. Jamais
+  sur Instagram, LinkedIn ni les comptes perso sans demande explicite du client.
 
 ---
 
