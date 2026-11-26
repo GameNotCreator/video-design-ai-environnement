@@ -1,0 +1,26 @@
+video-33 "Fais un vœu" — third-party material and licences
+
+Music
+- "Joyeux anniversaire / Happy Birthday to You": traditional melody (Mildred and Patty Hill, 1893), public domain;
+  played by a synthesized music box in mix.py (no recording used).
+- "Nightcrawler (Instrumental)" — fam0uz - Topic, https://www.youtube.com/watch?v=aQkfOkFvx2U — supplied by the client
+  (catalogue assets/music); licence not stated on YouTube: rights not verified.
+  Used in mix.py: track 7.70 s from film 7.48 until the last friend is gone (14.5); track 44.0 s from the closing text
+  (18.1) to the end.
+
+Code
+- px.js, kit.js, fx.js, post_ts.js, tools/render_range.mjs: from Lemo-Opuscar by Lemomo (LemoLab), styles/hd-2d/demo,
+  https://github.com/lemomo-ai/lemo-opuscar — MIT License, Copyright (c) 2026 Lemomo (LemoLab).
+- people.js, scene.js, ui.js, extra.js: written for this studio, after the techniques of the same demo.
+- three.js r170 (MIT) and the lemo-opuscar core render tools (MIT), loaded from the library at render time.
+
+Fonts (SIL Open Font License 1.1, licence texts in fonts/)
+- Cinzel — Natanael Gama · EB Garamond — Georg Duffner, Octavio Pardo · Figtree — Erik Kennedy
+  Source: https://github.com/google/fonts/tree/main/ofl
+
+Images
+- assets/logo-mascot.png: the WeLockIn logo, from welock.in (the client's own brand).
+
+Sound effects
+- room tone, fire, smoke-alarm beeps, chairs, steps, chimes: synthesized in mix.py (numpy, tools/mixkit.py,
+  lemo-opuscar core/audio/sfx.py, MIT).

@@ -25,3 +25,4 @@ de lui : « Je lui ai jamais dit. » · 11,3 il se penche vers lui : « J'ai jam
 
 ## Journal des versions
 - v1 (2026-11-26) : première version, en français. Musique : "Stranger Things Main Theme".
+- 2026-11-26 : le client n'aime pas (« Jaime pas change ») → concept abandonné, remplacé par video-33 « Fais un vœu ». Les fichiers restent pour mémoire.
