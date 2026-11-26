@@ -12,7 +12,7 @@ de perte sur 3 épisodes, le dire au client et proposer autre chose.
 | # | Titre | Idée (en haut scrolle / en bas verrouille) | Statut |
 |---|---|---|---|
 | 1 | Partiels | soirée de révisions → copie blanche 6/20 / copie pleine 16/20 | fait (video-34), programmé 28/11 |
-| 2 | Premier rendez-vous | il regarde son téléphone, elle s'ennuie et part / téléphone verrouillé, ils rient ; un an après : seul / en couple | à faire |
+| 2 | Premier rendez-vous | il regarde son téléphone, elle s'ennuie et part / téléphone verrouillé, ils rient ; un an après : seul / en couple | fait (video-35) |
 | 3 | Le stage | la veille de l'entretien : scrolle / prépare ses notes devant le miroir ; entretien : il bafouille / « Bienvenue dans l'équipe » | à faire |
 | 4 | L'été | serviette de plage et téléphone / guitare ; à la rentrée, en bas il joue à la soirée, en haut il le filme | à faire |
 | 5 | La salle de sport | scrolle entre les séries / s'entraîne ; six mois après, la différence se voit | à faire |
