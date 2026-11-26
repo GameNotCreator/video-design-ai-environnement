@@ -12,6 +12,25 @@ Limites : petits volumes (quelques centaines de vues), une vidéo par concept. C
 des lois. Une vidéo de moins de 48 h n'est pas encore jugée (video-17, video-22 au 25/11). Les chiffres YouTube de
 Windsor ont ~2 jours de retard (video-26 Mirror n'y a que 143 vues).
 
+## Premières vidéos en français (relevé du 26/11, 08:00 UTC : trop tôt pour juger)
+
+| | Âge | TikTok vues | à 1 s | à 2 s | à 3 s | Temps moyen | Vue en entier | Likes | YouTube vues |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| video-31 **Premiers pas** (FR) | 9 h | 562 | 61 % | 35 % | 23 % | 4,0 s (16 %) | **1,9 %** | 10 | 199 |
+| video-33 **Fais un vœu** (FR) | 2 h | pas encore publiée | – | – | – | – | – | – | 66 |
+| repères EN : Mirror · Class of | – | 480 · 538 | 74 · 64 % | 51 · 37 % | 40 · 29 % | 4,8 · 4,4 s | 1,7 · 0,9 % | 28 · 16 | Class of : 504 à 6,5 h |
+
+- **TikTok : le français n'a pas encore changé la distribution.** Premiers pas fait 562 vues en 9 h, le même premier
+  palier que les vidéos en anglais (480–610).
+- **Le début retient moins que les meilleures** (61 % à 1 s, 23 % à 3 s, contre 74 % et 40 % pour Mirror). La
+  première image (un bébé petit dans un salon sombre, trois personnages) se lit moins vite qu'un visage proche.
+- **Ceux qui restent vont au bout.** C'est le meilleur taux de vue complète de la série pixel (1,9 %), et 4 % des gens
+  sont encore là à 20 s, contre 3 % pour Mirror. L'histoire tient ; c'est l'accroche qui perd.
+- **YouTube : la version française fait 2 à 3 fois moins de vues au même âge** (199 en 9 h, contre 504 en 6,5 h pour
+  Class of en anglais). C'est cohérent avec le public YouTube, anglophone à 98 %.
+- À refaire le 27/11 au soir (48 h) avec la rétention YouTube (Windsor a ~2 jours de retard) et la publication TikTok
+  de Fais un vœu.
+
 ## Rétention (stats privées Windsor, 25/11)
 
 ### TikTok : on perd les gens dans la première seconde, et ce sont des francophones
@@ -147,9 +166,11 @@ Historique (20/11) : le pixel 2.5D écrase le motion design plat (48 vues contre
 
 ## Règles (à appliquer à chaque nouveau script)
 
-- **Langue par plateforme (proposé au client le 25/11, en attente de sa réponse)** : TikTok en français (texte à
-  l'écran, voix, sous-titres, légende), YouTube en anglais ; Instagram et Facebook à décider quand on aura leurs pays.
-  Tant que le client n'a pas dit oui, la règle « vidéos en anglais » de `AGENTS.md` tient.
+- **Langue par plateforme** : le client a demandé des vidéos en français le 25/11 (video-31, video-33). Premier relevé
+  (26/11) : sur YouTube, le français fait 2 à 3 fois moins de vues au même âge → publier une version anglaise sur
+  YouTube. Sur TikTok, pas encore de différence de vues ; à juger à 48 h.
+- **Première image : un visage proche** (Mirror, 74 % à 1 s) plutôt qu'une scène à plusieurs personnages vue de loin
+  (Premiers pas, 61 %). L'enjeu peut être à côté, mais le visage et le téléphone doivent se lire en une demi-seconde.
 - **Frame 0 = le téléphone ET la victime/l'enjeu dans la même image**, plus le hook écrit. Pas de plan d'ambiance
   d'abord. Un visage proche et lisible (Mirror) tient mieux qu'un plan large. Objectif mesuré : **≥ 75 % des gens
   encore là à 1 s et ≥ 55 % à 2 s** sur TikTok (meilleur actuel : 74 % / 51 %).
