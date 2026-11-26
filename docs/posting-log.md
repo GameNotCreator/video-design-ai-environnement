@@ -13,3 +13,4 @@
 | 2026-11-27 17:00 | video-20 v2 « Fetch » (FR) | TikTok, Facebook Reel, Instagram Reel | 443730548 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-1148414635977653044 |
 | 2026-11-27 20:00 | video-9 v4 « Surgeon » (FR) | TikTok, Facebook Reel, Instagram Reel | 443735287 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=5760111967471879067 |
 | 2026-11-27 23:00 | video-10 v4 « Lifeguard » (FR) | TikTok, Facebook Reel, Instagram Reel | 443740538 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=6811077676470124900 |
+| 2026-11-28 11:00 | video-24 v2 « Train » (FR) | TikTok, Facebook Reel, Instagram Reel | 443745944 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-649515144712796156 |
