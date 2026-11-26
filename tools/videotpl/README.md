@@ -16,4 +16,5 @@
 - **mix.py** : piste de `assets/music/` coupée sur les temps forts + bruitages synthétisés (`tools/mixkit.py`).
 
 Contrôles : `sh build.sh stills` (images de contrôle), `readcheck.mjs` (dans `build.sh master`). Rendu final :
-`sh tools/videotpl/render.sh N` en arrière-plan (~10 min pour 24 s sans GPU). Livraison : `output/`, commit, push.
+`sh tools/videotpl/render.sh N` en arrière-plan (~10 min pour 24 s sans GPU), puis la version anglaise
+`sh tools/videotpl/render_en.sh N` (utilise le mix du master). Livraison : `output/`, commit, push.
