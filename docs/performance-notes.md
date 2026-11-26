@@ -176,6 +176,10 @@ Historique (20/11) : le pixel 2.5D écrase le motion design plat (48 vues contre
   encore là à 1 s et ≥ 55 % à 2 s** sur TikTok (meilleur actuel : 74 % / 51 %).
 - **Pas de creux après le hook** : quand le texte de hook sort (~3,5 s), un nouvel état visible doit arriver avant
   **5 s**, puis un changement au moins toutes les 2 s jusqu'à la révélation. La falaise YouTube est à 4,5–7 s.
+- **Test de format (26/11) : « Deux trajectoires »** (video-34 « Partiels ») : écran partagé, le même étudiant qui
+  scrolle en haut et verrouille en bas, fin sur « Haut ou bas ? ». Basé sur la seule percée TikTok (« Même nuit »,
+  5 830 vues, 8,1 % de likes) et la seule vidéo partagée (« closer ») : elles montrent ce qu'on gagne, pas ce qu'on perd.
+  À comparer aux histoires de perte (Premiers pas, Fais un vœu) à 48 h : vues, likes, commentaires.
 - **Un être vivant à perdre** : quelqu'un en danger, quelqu'un qui attend (chien, fille, famille), ou lui-même qui
   vieillit. Les concepts « objet » ou « système » (tableau, ascenseur, salle de sport) font moins de vues sur YouTube.
 - **La révélation se voit, elle ne se lit pas** : un changement d'image (vieilli, vide, parti). Le texte (tableau,
