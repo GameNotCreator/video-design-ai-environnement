@@ -18,12 +18,16 @@ planificateur Metricool avant son heure (lien `plannerUrl` donné à chaque fois
 3 heures entre chaque vidéo »)
 
 - **6 vidéos par jour et par plateforme**, toutes les 3 h : **08:00, 11:00, 14:00, 17:00, 20:00, 23:00**
-  (Europe/Zurich). La même vidéo part en français sur TikTok + Facebook Reel + Instagram Reel et, si elle a une version
-  anglaise, en YouTube Short au même créneau.
+  (Europe/Zurich). La même vidéo part en français sur TikTok + Facebook Reel + Instagram Reel et sa version anglaise
+  en YouTube Short sur le premier créneau de nuit libre (ci-dessous).
 - La tâche programmée tourne 6 fois par jour (02:36, 06:36, 10:36, 14:36, 18:36, 22:36) ; chaque passage produit
   **une** vidéo et la place sur le **premier créneau libre qui commence au moins 3 h plus tard**.
 - Les stats et l'analyse (évolution, impact, prochains scripts) ne se font pas aux passages de publication : tâches
   « Analyse quotidienne » (12:47) et « Bilan de la semaine » (dimanche 20:13), procédure dans `docs/analyse.md`.
+- **YouTube : la nuit, pour les États-Unis** (demande du client le 28/11) : les versions anglaises partent en YouTube
+  Short **3 fois par nuit, à 00:00, 02:00 et 04:00** (heure suisse ; 18 h, 20 h et 22 h à New York, 15 h, 17 h et 19 h à
+  Los Angeles), sur YouTube seulement. TikTok, Facebook et Instagram restent en français aux créneaux de jour. Les vidéos
+  sortent plus vite (6 par jour) que YouTube n'en prend (3 par nuit) : la file anglaise s'étend sur les nuits suivantes.
 - **Seulement des vidéos neuves** (demande du client le 27/11 : « ne poste plus les anciennes vidéos, mets que les
   nouvelles ») : plus de remakes FR des vidéos anglaises. Les 4 remakes encore en attente ce jour-là (Lifeguard, Train,
   1 %, Class of) sont passés en **brouillon** dans Metricool (l'API ne supprime pas) : un post `draft: true` ne publie

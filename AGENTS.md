@@ -299,7 +299,7 @@ Characters: <nombre> / 2200
 - Pas de vocabulaire "IA" (`leverage`, `streamline`, `unlock`…), tirets cadratins quasi absents, noms propres en capitales.
 - Publication : **automatique, 6 vidéos par jour, nouvelles vidéos seulement** (27/11), toutes les 3 h de 08:00 à 23:00, par Metricool (demandes du client le 26/11) : comptes, réglages et
   procédure dans `docs/posting.md`, journal dans `docs/posting-log.md`, file d'attente dans `docs/backlog.md`. Réseaux :
-  TikTok, Facebook, Instagram (FR) et YouTube (EN). Jamais LinkedIn ni les comptes perso sans demande explicite du client.
+  TikTok, Facebook, Instagram (FR, de jour) et YouTube (EN, 3 par nuit à 00:00, 02:00, 04:00 pour les États-Unis, 28/11). Jamais LinkedIn ni les comptes perso sans demande explicite du client.
 
 ---
 
