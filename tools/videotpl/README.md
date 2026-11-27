@@ -10,7 +10,7 @@
   `EN ? '…' : '…'` pour chaque texte → version anglaise avec `--q 'ss=1&lang=en'` (exemple : video-34).
 - **scene.js** : `build()` → `{ scene, update(t, shot, cam, post, renderer) }` ; personnages `makePerson(look, frames)`
   de people.js (poses : phone, standphone, sitlaugh, sit, sittalk, look, write, stand, walk, wave, talk, push, film,
-  kneel `{ open: 1 }` ; looks : beard, glasses, gown, gradCap, medal, buds, hairStyle…). Exemples : video-31 (salon,
+  kneel `{ open: 1 }`, guitar (`step`, `up`, `mouth`), clap, sitclap ; looks : beard, glasses, gown, gradCap, medal, buds, hairStyle…). Exemples : video-31 (salon,
   sauts dans le temps), video-33 (fête, feu, fumée), video-34 (deux étages, écran partagé).
 - **extra.js** : `extra(g, t, H, layer)` (`'under'` / `'over'`) pour l'UI 2D en plus, `extraTexts(t)` pour readcheck.
 - **mix.py** : piste de `assets/music/` coupée sur les temps forts + bruitages synthétisés (`tools/mixkit.py`).

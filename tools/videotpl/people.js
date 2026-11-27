@@ -1,4 +1,4 @@
-// Procedural pixel people (video-31: + kneel with open arms; video-32: + earbuds) (3/4 side view facing right), one atlas per character, frames = poses.
+// Procedural pixel people (video-31: + kneel with open arms; video-32: + earbuds; video-37: + guitar, clap, sitclap) (3/4 side view facing right), one atlas per character, frames = poses.
 // A character is a "look" (colours, hair, outfit, accessories); poses are data (stand, walk, sit, phone, look, wave…).
 import * as THREE from 'three';
 import { PX, ramp, hex, texOf, billboard, blob } from './px.js';
@@ -20,7 +20,7 @@ export const PAL = {
   jean: R(['#141927', '#222b40', '#33405c', '#485a7c']), grey: R(['#2a2a30', '#44444c', '#62626c', '#82828c']),
   shoe: R(['#1a1210', '#2e221c', '#4a382c']), sneaker: R(['#4c4c54', '#9a9aa4', '#dcdce2']),
   stone: R(['#3a3a3e', '#5a5a5e', '#7e7c7a', '#a29e98']), moss: R(['#22301c', '#34462a', '#4e6236', '#6a7a46']), orange: R(['#5a2a08', '#9a4a10', '#d07020', '#f09a3a']),
-  phone: R(['#0d0e14', '#1d1f2a', '#30333f']), glow: R(['#3d7fe0', '#7fb8ff', '#cfe6ff', '#ffffff']), gold: R(['#5a4210', '#9a7424', '#d8b04a', '#f4dc8a']),
+  phone: R(['#0d0e14', '#1d1f2a', '#30333f']), honey: R(['#4a240e', '#86491c', '#c07a32', '#e8a854']), glow: R(['#3d7fe0', '#7fb8ff', '#cfe6ff', '#ffffff']), gold: R(['#5a4210', '#9a7424', '#d8b04a', '#f4dc8a']),
 };
 
 // a readable portrait phone: dark bezel, lit screen with a status bar and a feed, a camera dot (5 x 8 px).
@@ -54,7 +54,7 @@ const PH_POSES = ['phone', 'standphone', 'walkphone', 'sitlaugh'];
 // look: { skin, hair, hairStyle: 'short'|'long'|'bun'|'bald', top, bottom, dress, gown, gradCap, veil, beard, glasses, cane, hunch, shoe, small, buds }
 // pose: { pose: 'stand'|'walk'|'sit'|'phone'|'look'|'wave'|'push'|'kick'|'talk', step 0..3, bob, blink, mouth }
 function draw(P, E, L, p) {
-  const pose = p.pose || 'stand', sit = ['sit', 'phone', 'look', 'sittalk', 'sitlaugh', 'write'].includes(pose), ph = pose === 'phone' || pose === 'standphone' || pose === 'walkphone' || pose === 'sitlaugh', by = (p.bob || 0) + (L.hunch || 0) + (L.small || 0) + (pose === 'kneel' ? 7 : 0);
+  const pose = p.pose || 'stand', sit = ['sit', 'phone', 'look', 'sittalk', 'sitlaugh', 'write', 'guitar', 'sitclap'].includes(pose), ph = pose === 'phone' || pose === 'standphone' || pose === 'walkphone' || pose === 'sitlaugh', by = (p.bob || 0) + (L.hunch || 0) + (L.small || 0) + (pose === 'kneel' ? 7 : 0);
   const S = PAL[L.skin || 'skin'], Hr = PAL[L.hair || 'hairDark'], Top = PAL[L.top || 'teal'], Bot = PAL[L.bottom || 'jean'], Sh = PAL[L.shoe || 'sneaker'];
   const top = 17 + by, waist = 33;
   // —— legs ——
@@ -94,7 +94,7 @@ function draw(P, E, L, p) {
   if (L.medal) { for (let y = top; y < top + 5; y++) { P.set(17 + Math.floor((y - top) / 2), y, hex('#2a4a9a')); } P.rect(18, top + 5, 3, 3, PAL.gold(.9, 0, 0)); E.set(19, top + 6, [120, 100, 40]); }
   if (L.suit) { for (let y = top + 1; y < top + 8; y++) P.set(19, y, PAL.white(.9, 0, 0)); P.set(19, top + 3, PAL.black(.2, 0, 0)); P.set(19, top + 5, PAL.black(.2, 0, 0)); }
   // —— head ——
-  const look = pose === 'look', down = ph || pose === 'write' || p.doze ? 1 : 0;
+  const look = pose === 'look', down = ph || pose === 'write' || p.doze || (pose === 'guitar' && !p.up) ? 1 : 0;
   const hx = 17 + down + (L.hunch ? 1 : 0), hy = 9 + by + down;
   if (L.hairStyle === 'long' || L.hairStyle === 'bun') P.ellipse(hx - 3, hy + (L.hairUp ? 1 : 3), 3.4, L.hairUp ? 5 : 6.5, (x, y, dx, dy) => Hr(.5 - dy * .2, x, y));
   P.ellipse(hx, hy, 5.4, 5.8, (x, y, dx, dy) => (L.hairStyle === 'bald' && dy < -.1 && dx > -.5) ? S(.7 - dy * .2, x, y) : Hr(.55 - dy * .3 - dx * .1, x, y));
@@ -149,6 +149,19 @@ function draw(P, E, L, p) {
   } else if (pose === 'kneel') {
     sl([[21, top + 2], [23, top + 2], [25, top + 1], [27, top]]); hand(28, top - 1);
     P.rect(30, top - 2, 3, 3, PAL.black(.4, 0, 0)); P.set(31, top - 3, PAL.gold(.95, 0, 0)); E.set(31, top - 3, PAL.gold(.95, 0, 0)); P.set(31, top - 4, [255, 255, 255]); E.set(31, top - 4, [255, 255, 255]);
+  } else if (pose === 'guitar') {   // acoustic guitar across the lap, neck forward; strumming hand on the strings
+    const Gw = PAL.honey, k = p.step ?? 0;
+    P.ellipse(14, 32, 5.6, 4.0, (x, y, dx, dy) => Gw(.62 - dy * .25 - dx * .1, x, y));
+    P.ellipse(19, 30, 3.4, 3.0, (x, y, dx, dy) => Gw(.7 - dy * .25, x, y));
+    P.ellipse(17, 31, 1.3, 1.3, () => hex('#1a0e08'));
+    for (let i = 0; i < 12; i++) { const x = 21 + i, y = Math.round(29.5 - i * .45); P.set(x, y, hex('#3a2416')); P.set(x, y + 1, hex('#2a180e')); if (i % 3 === 1) P.set(x, y, hex('#9a8a70')); }
+    P.rect(32, 23, 2, 2, hex('#2a180e'));
+    sl([[21, top + 2], [22, top + 4], [23, top + 6], [25, top + 7], [26, top + 8]]); hand(27, top + 9);   // fretting hand on the neck
+    P.rect(12 + k, 28 + k * 2, 2, 2, S(.66, 0, 0)); P.set(11 + k, 27 + k * 2, Body(.5, 0, 0));        // strumming hand
+  } else if (pose === 'clap' || pose === 'sitclap') {   // hands meeting in front of the chest
+    const k = p.step ?? 0;
+    sl([[21, top + 2], [22, top + 4], [23, top + 5], [24, top + 5]]);
+    if (k) hand(25, top + 3); else { hand(24, top + 4); hand(27, top + 2); }
   } else if (pose === 'film') {
     sl([[21, top + 1], [23, top], [25, top - 1], [26, top - 2]]); hand(27, top - 3);
     for (let j = 0; j < 6; j++) for (let i = 0; i < 2; i++) P.set(28 + i, top - 6 + j, PAL.phone(.45 + i * .2, i, j));
