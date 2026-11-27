@@ -12,7 +12,8 @@ Network: the environment must allow www.youtube.com, i.ytimg.com and www.tiktok.
 import csv, datetime, json, os, subprocess, sys, urllib.request, xml.etree.ElementTree as ET
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-ACCOUNTS = {'youtube': 'https://www.youtube.com/@welockin-students/shorts', 'tiktok': 'https://www.tiktok.com/@welockin.study'}
+ACCOUNTS = {'youtube': 'https://www.youtube.com/@welockin-students/shorts', 'tiktok': 'https://www.tiktok.com/@welockin.study',
+            'tiktok_study_lock': 'https://www.tiktok.com/@study_lock.in'}   # the account Metricool posts to since 26/11
 OUT = os.path.join(ROOT, 'docs', 'stats', datetime.date.today().isoformat())
 
 def ytdlp(url):
@@ -43,14 +44,14 @@ def youtube():
     except Exception as ex: print('! youtube rss', ex)
     write('youtube.csv', list(rows.values()))
 
-def tiktok():
-    d = ytdlp(ACCOUNTS['tiktok'])
+def tiktok(key='tiktok', name='tiktok.csv'):
+    d = ytdlp(ACCOUNTS[key])
     if not d: return
     rows = [{'id': e['id'], 'published': datetime.datetime.fromtimestamp(e['timestamp'], datetime.UTC).strftime('%Y-%m-%dT%H:%M') if e.get('timestamp') else '',
              'views': e.get('view_count'), 'likes': e.get('like_count'), 'comments': e.get('comment_count'), 'reposts': e.get('repost_count'),
              'saves': e.get('save_count'), 'duration': e.get('duration'), 'caption': (e.get('description') or e.get('title') or '').replace('\n', ' ')[:160]} for e in d.get('entries', [])]
-    write('tiktok.csv', rows)
+    write(name, rows)
 
 if __name__ == '__main__':
-    youtube(); tiktok()
+    youtube(); tiktok(); tiktok('tiktok_study_lock', 'tiktok_study_lock.csv')
     print('Instagram / Facebook: no public stats without login; ask the client for Meta Business Suite exports.')

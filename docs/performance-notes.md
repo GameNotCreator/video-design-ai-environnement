@@ -12,6 +12,22 @@ Limites : petits volumes (quelques centaines de vues), une vidéo par concept. C
 des lois. Une vidéo de moins de 48 h n'est pas encore jugée (video-17, video-22 au 25/11). Les chiffres YouTube de
 Windsor ont ~2 jours de retard (video-26 Mirror n'y a que 143 vues).
 
+## Relevé du 27/11 (12:50) : premier épisode de la série en ligne depuis 5 h (pas encore jugé)
+
+Tableau complet : `docs/stats/evolution.md`. Rien n'a 48 h : aucune règle ne change aujourd'hui.
+
+- **YouTube : « Premier rendez-vous » (série, EN) fait 905 vues en 5 h**, le meilleur départ de toutes les vidéos pixel
+  (Class of en avait ~500 à 6,5 h ; les versions FR Premiers pas et Fais un vœu sont à 306 et 225 après 30–37 h).
+  Confirme la règle « anglais sur YouTube » et donne un premier signe pour la série.
+- **Instagram : la série retient deux fois mieux** que l'histoire de perte : 38 % de skip et 10,7 s de temps moyen,
+  contre 74 % et 4,1 s pour Fais un vœu (5 h contre 14 h d'âge, à confirmer).
+- **TikTok `study_lock.in`** : Premier rendez-vous 213 vues en 5 h, Fais un vœu 198 en 14 h ; temps moyen de Fais un
+  vœu 2 s, presque personne ne va au bout. Le compte part de bas (153–703 vues par vidéo avant nous).
+- **Facebook est plat** : 150 à 280 vues par vidéo quelle qu'elle soit, temps moyen 2–4 s (Mirror 9 s). Attention :
+  Premiers pas et Fais un vœu étaient déjà sur la page (25/11 23:04 et 26/11 06:03, hors de notre planning) et les
+  remakes FR programmés (Mirror, Fetch, Surgeon, Lifeguard, Train, 1 %, Class of) y sont déjà en anglais : doublons.
+- À juger le 29/11 (48 h) : Premier rendez-vous contre Fais un vœu et Premiers pas, sur les 4 plateformes.
+
 ## Premières vidéos en français (relevé du 26/11, 08:00 UTC : trop tôt pour juger)
 
 | | Âge | TikTok vues | à 1 s | à 2 s | à 3 s | Temps moyen | Vue en entier | Likes | YouTube vues |
