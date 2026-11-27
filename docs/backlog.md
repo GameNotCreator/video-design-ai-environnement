@@ -14,7 +14,7 @@ de perte sur 3 épisodes, le dire au client et proposer autre chose.
 | 1 | Partiels | soirée de révisions → copie blanche 6/20 / copie pleine 16/20 | fait (video-34), programmé 28/11 |
 | 2 | Premier rendez-vous | il regarde son téléphone, elle s'ennuie et part / téléphone verrouillé, ils rient ; un an après : seul / en couple | fait (video-35), programmé 27/11 10:00 |
 | 3 | Le stage | la veille de l'entretien : scrolle / prépare ses notes devant le miroir ; entretien : il bafouille / « Bienvenue dans l'équipe » | fait (video-36), programmé 28/11 20:00 |
-| 4 | L'été | serviette de plage et téléphone / guitare ; à la rentrée, en bas il joue à la soirée, en haut il le filme | à faire |
+| 4 | L'été | serviette de plage et téléphone / guitare ; à la rentrée, en bas il joue à la soirée, en haut il le filme | fait (video-37), programmé 28/11 23:00 |
 | 5 | La salle de sport | scrolle entre les séries / s'entraîne ; six mois après, la différence se voit | à faire |
 | 6 | Le permis | soirées de code : scrolle / révise ; examen : recalé / il brandit son permis | à faire |
 | 7 | Erasmus | six mois avant le départ : scrolle / apprend l'espagnol ; à Madrid : montre le menu du doigt / discute avec les gens | à faire |

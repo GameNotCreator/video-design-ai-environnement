@@ -18,3 +18,5 @@
 | 2026-11-28 17:00 | video-17 v2 « Class of » (FR) | TikTok, Facebook Reel, Instagram Reel | 443758283 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-5859978976174128778 |
 | 2026-11-28 20:00 | video-36 v1 « Le stage » (FR) | TikTok, Facebook Reel, Instagram Reel | 443849938 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-5412808122418183925 |
 | 2026-11-28 20:00 | video-36 v1 « Le stage » (EN) | YouTube Short | 443849971 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=1646527402137045445 |
+| 2026-11-28 23:00 | video-37 v1 « L'été » (FR) | TikTok, Facebook Reel, Instagram Reel | 443969308 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-4160733531477688305 |
+| 2026-11-28 23:00 | video-37 v1 « L'été » (EN) | YouTube Short | 443969334 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=2989129133824952587 |
