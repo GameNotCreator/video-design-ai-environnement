@@ -1,4 +1,4 @@
-// Procedural pixel people (video-31: + kneel with open arms; video-32: + earbuds; video-37: + guitar, clap, sitclap) (3/4 side view facing right), one atlas per character, frames = poses.
+// Procedural pixel people (video-31: + kneel with open arms; video-32: + earbuds; video-37: + guitar, clap, sitclap; video-38: + sitpoint) (3/4 side view facing right), one atlas per character, frames = poses.
 // A character is a "look" (colours, hair, outfit, accessories); poses are data (stand, walk, sit, phone, look, wave…).
 import * as THREE from 'three';
 import { PX, ramp, hex, texOf, billboard, blob } from './px.js';
@@ -54,7 +54,7 @@ const PH_POSES = ['phone', 'standphone', 'walkphone', 'sitlaugh'];
 // look: { skin, hair, hairStyle: 'short'|'long'|'bun'|'bald', top, bottom, dress, gown, gradCap, veil, beard, glasses, cane, hunch, shoe, small, buds }
 // pose: { pose: 'stand'|'walk'|'sit'|'phone'|'look'|'wave'|'push'|'kick'|'talk', step 0..3, bob, blink, mouth }
 function draw(P, E, L, p) {
-  const pose = p.pose || 'stand', sit = ['sit', 'phone', 'look', 'sittalk', 'sitlaugh', 'write', 'guitar', 'sitclap'].includes(pose), ph = pose === 'phone' || pose === 'standphone' || pose === 'walkphone' || pose === 'sitlaugh', by = (p.bob || 0) + (L.hunch || 0) + (L.small || 0) + (pose === 'kneel' ? 7 : 0);
+  const pose = p.pose || 'stand', sit = ['sit', 'phone', 'look', 'sittalk', 'sitlaugh', 'write', 'guitar', 'sitclap', 'sitpoint'].includes(pose), ph = pose === 'phone' || pose === 'standphone' || pose === 'walkphone' || pose === 'sitlaugh', by = (p.bob || 0) + (L.hunch || 0) + (L.small || 0) + (pose === 'kneel' ? 7 : 0);
   const S = PAL[L.skin || 'skin'], Hr = PAL[L.hair || 'hairDark'], Top = PAL[L.top || 'teal'], Bot = PAL[L.bottom || 'jean'], Sh = PAL[L.shoe || 'sneaker'];
   const top = 17 + by, waist = 33;
   // —— legs ——
@@ -167,7 +167,7 @@ function draw(P, E, L, p) {
     for (let j = 0; j < 6; j++) for (let i = 0; i < 2; i++) P.set(28 + i, top - 6 + j, PAL.phone(.45 + i * .2, i, j));
   } else if (pose === 'wave') {
     sl([[21, top + 1], [22, top - 1], [23, top - 3], [23, top - 5]]); hand(23, top - 8);
-  } else if (pose === 'push') {
+  } else if (pose === 'push' || pose === 'sitpoint') {
     sl([[21, top + 3], [23, top + 4], [25, top + 5], [27, top + 5]]); hand(29, top + 5);
   } else if (pose === 'talk' || pose === 'sittalk') {
     sl([[21, top + 3], [22, top + 5], [24, top + 6], [26, top + 6]]); hand(27, top + 5);
