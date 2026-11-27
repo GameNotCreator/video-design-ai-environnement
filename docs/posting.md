@@ -24,8 +24,10 @@ planificateur Metricool avant son heure (lien `plannerUrl` donné à chaque fois
   **une** vidéo et la place sur le **premier créneau libre qui commence au moins 3 h plus tard**.
 - Les stats et l'analyse (évolution, impact, prochains scripts) ne se font pas aux passages de publication : tâches
   « Analyse quotidienne » (12:47) et « Bilan de la semaine » (dimanche 20:13), procédure dans `docs/analyse.md`.
-- Pour remplir vite : les versions françaises des meilleures vidéos anglaises (`?lang=fr`,
-  `tools/videotpl/render_lang.sh N K fr`) partent sur TikTok, Facebook et Instagram seulement (l'anglais est déjà sur YouTube).
+- **Seulement des vidéos neuves** (demande du client le 27/11 : « ne poste plus les anciennes vidéos, mets que les
+  nouvelles ») : plus de remakes FR des vidéos anglaises. Les 4 remakes encore en attente ce jour-là (Lifeguard, Train,
+  1 %, Class of) sont passés en **brouillon** dans Metricool (l'API ne supprime pas) : un post `draft: true` ne publie
+  rien et son créneau compte comme libre ; le client peut les supprimer dans le planificateur.
 
 ## Programmer un post (outil `createScheduledPost`)
 
