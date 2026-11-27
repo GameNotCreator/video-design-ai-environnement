@@ -15,9 +15,8 @@ de perte sur 3 épisodes, le dire au client et proposer autre chose.
 | 2 | Premier rendez-vous | il regarde son téléphone, elle s'ennuie et part / téléphone verrouillé, ils rient ; un an après : seul / en couple | fait (video-35), programmé 27/11 10:00 |
 | 3 | Le stage | la veille de l'entretien : scrolle / prépare ses notes devant le miroir ; entretien : il bafouille / « Bienvenue dans l'équipe » | fait (video-36), programmé 28/11 20:00 |
 | 4 | L'été | serviette de plage et téléphone / guitare ; à la rentrée, en bas il joue à la soirée, en haut il le filme | fait (video-37), programmé 28/11 23:00 |
-| 5 | La salle de sport | scrolle entre les séries / s'entraîne ; six mois après, la différence se voit | à faire |
 | 6 | Le permis | soirées de code : scrolle / révise ; examen : recalé / il brandit son permis | à faire |
-| 7 | Erasmus | six mois avant le départ : scrolle / apprend l'espagnol ; à Madrid : montre le menu du doigt / discute avec les gens | à faire |
+| 7 | Erasmus | six mois avant le départ : scrolle / apprend l'espagnol ; à Madrid : montre le menu du doigt / discute avec les gens | en cours (video-38), créneau 29/11 08:00 |
 | 8 | Le projet | ses soirées : scrolle / code son appli ; un an après : regarde le lancement d'une appli sur son téléphone / c'est son appli | à faire |
 | 9 | Janvier (résolutions) | la même liste le 1er janvier ; en juin : jaunie / tout est coché — **à programmer entre le 28/12 et le 02/01** | à faire (date fixe) |
 | 10 | La coloc | dimanche soir : scrolle dans le canapé / fait le ménage et cuisine ; lundi : vaisselle empilée, coloc fâchée / coloc qui l'invite à dîner | à faire |
@@ -27,3 +26,4 @@ de perte sur 3 épisodes, le dire au client et proposer autre chose.
 | 14 | La musique | les soirées : scrolle / pratique le piano ; un an après : regarde des covers / joue devant ses amis | à faire |
 | 15 | Le sommeil | 23 h : scrolle jusqu'à 3 h / téléphone verrouillé, dort ; le matin : zombie en amphi / frais et réveillé | à faire |
 | 16 | Les amis | samedi : scrolle seul dans sa chambre / téléphone verrouillé, sort avec ses amis ; dimanche : photos des autres / il est sur les photos | à faire |
+| 5 | La salle de sport | scrolle entre les séries / s'entraîne ; six mois après, la différence se voit | à faire (descendue le 27/11 : règle « objet ou système » de `docs/performance-notes.md`) |
