@@ -22,6 +22,8 @@ planificateur Metricool avant son heure (lien `plannerUrl` donné à chaque fois
   anglaise, en YouTube Short au même créneau.
 - La tâche programmée tourne 6 fois par jour (02:36, 06:36, 10:36, 14:36, 18:36, 22:36) ; chaque passage produit
   **une** vidéo et la place sur le **premier créneau libre qui commence au moins 3 h plus tard**.
+- Les stats et l'analyse (évolution, impact, prochains scripts) ne se font pas aux passages de publication : tâches
+  « Analyse quotidienne » (12:47) et « Bilan de la semaine » (dimanche 20:13), procédure dans `docs/analyse.md`.
 - Pour remplir vite : les versions françaises des meilleures vidéos anglaises (`?lang=fr`,
   `tools/videotpl/render_lang.sh N K fr`) partent sur TikTok, Facebook et Instagram seulement (l'anglais est déjà sur YouTube).
 

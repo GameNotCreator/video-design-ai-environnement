@@ -1,7 +1,8 @@
 # Metricool : les stats privées (rétention) des 4 plateformes
 
-> Au 25/11/2026, aucun réseau n'est relié à Metricool : la source principale est Windsor.ai (`docs/stats/windsor.md`).
-> Cette page sert si le client relie ses comptes à Metricool.
+> Depuis le 26/11/2026, le client a relié à Metricool (marque « Welockin », blogId 8360223) : TikTok `study_lock.in`,
+> la page Facebook, Instagram `welock.in` et YouTube `@welockin-students`. C'est la source des stats de ces comptes
+> (Windsor ne connaît que l'ancien TikTok @welockin.study et YouTube). Analyse quotidienne : `docs/analyse.md`.
 
 Connecteur claude.ai **Metricool Social Media Management** (outils `mcp__Metricool_Social_Media_Management__*`).
 Il lit les vraies statistiques des comptes une fois ceux-ci reliés dans Metricool (app.metricool.com → Brand →
