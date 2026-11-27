@@ -19,7 +19,7 @@ de perte sur 3 épisodes, le dire au client et proposer autre chose.
 | 7 | Erasmus | six mois avant le départ : scrolle / apprend l'espagnol ; à Madrid : montre le menu du doigt / discute avec les gens | fait (video-38), programmé 29/11 08:00 |
 | 8 | Le projet | ses soirées : scrolle / code son appli ; un an après : regarde le lancement d'une appli sur son téléphone / c'est son appli | fait (video-40), programmé 29/11 14:00 |
 | 9 | Janvier (résolutions) | la même liste le 1er janvier ; en juin : jaunie / tout est coché — **à programmer entre le 28/12 et le 02/01** | à faire (date fixe) |
-| 10 | La coloc | dimanche soir : scrolle dans le canapé / fait le ménage et cuisine ; lundi : vaisselle empilée, coloc fâchée / coloc qui l'invite à dîner | en cours (video-42), créneau 28/11 11:00 |
+| 10 | La coloc | dimanche soir : scrolle dans le canapé / fait le ménage et cuisine ; lundi : vaisselle empilée, coloc fâchée / coloc qui l'invite à dîner | fait (video-42), programmé 28/11 11:00 |
 | 11 | Le mémoire | les mois de rédaction : scrolle / écrit ; soutenance : page blanche, jury perplexe / applaudissements | à faire |
 | 12 | Le concours | préparation d'un concours (médecine, école) : scrolle / révise ; résultats : nom absent / nom sur la liste | à faire |
 | 13 | Le job étudiant | le matin du premier jour : scrolle au lit, en retard / prêt à l'heure ; le soir : viré / premier salaire | à faire |

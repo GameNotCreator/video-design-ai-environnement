@@ -28,3 +28,5 @@
 | 2026-11-29 14:00 | video-40 v1 « Le projet » (EN) | YouTube Short | 444698504 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-4909990439100266150 |
 | 2026-11-27 23:00 (demande du client : remplir le créneau de ce soir) | video-41 v1 « Le sommeil » (FR) | TikTok, Facebook Reel, Instagram Reel | 444857041 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=3001416118139898755 |
 | 2026-11-27 23:00 | video-41 v1 « Le sommeil » (EN) | YouTube Short | 444857096 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=2126156556080464432 |
+| 2026-11-28 11:00 | video-42 v1 « La coloc » (FR) | TikTok, Facebook Reel, Instagram Reel | 444919993 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=7853585301403553661 |
+| 2026-11-28 11:00 | video-42 v1 « La coloc » (EN) | YouTube Short | 444920037 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=5538393432304011282 |
