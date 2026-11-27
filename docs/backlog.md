@@ -24,6 +24,6 @@ de perte sur 3 épisodes, le dire au client et proposer autre chose.
 | 12 | Le concours | préparation d'un concours (médecine, école) : scrolle / révise ; résultats : nom absent / nom sur la liste | à faire |
 | 13 | Le job étudiant | le matin du premier jour : scrolle au lit, en retard / prêt à l'heure ; le soir : viré / premier salaire | à faire |
 | 14 | La musique | les soirées : scrolle / pratique le piano ; un an après : regarde des covers / joue devant ses amis | à faire |
-| 15 | Le sommeil | 23 h : scrolle jusqu'à 3 h / téléphone verrouillé, dort ; le matin : zombie en amphi / frais et réveillé | en cours (video-41), créneau 27/11 23:00 (demande du client) |
+| 15 | Le sommeil | 23 h : scrolle jusqu'à 3 h / téléphone verrouillé, dort ; le matin : zombie en amphi / frais et réveillé | fait (video-41), programmé 27/11 23:00 (demande du client) |
 | 16 | Les amis | samedi : scrolle seul dans sa chambre / téléphone verrouillé, sort avec ses amis ; dimanche : photos des autres / il est sur les photos | à faire |
 | 5 | La salle de sport | scrolle entre les séries / s'entraîne ; six mois après, la différence se voit | à faire (descendue le 27/11 : règle « objet ou système » de `docs/performance-notes.md`) |
