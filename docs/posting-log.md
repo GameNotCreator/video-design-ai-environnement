@@ -24,3 +24,5 @@
 | 2026-11-29 08:00 | video-38 v1 « Erasmus » (EN) | YouTube Short | 444157660 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-2040670661131286131 |
 | 2026-11-29 11:00 | video-39 v1 « Le permis » (FR) | TikTok, Facebook Reel, Instagram Reel | 444439955 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-5935281185953002745 |
 | 2026-11-29 11:00 | video-39 v1 « Le permis » (EN) | YouTube Short | 444439988 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=2391929971093422681 |
+| 2026-11-29 14:00 | video-40 v1 « Le projet » (FR) | TikTok, Facebook Reel, Instagram Reel | 444698458 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=6790493884056749173 |
+| 2026-11-29 14:00 | video-40 v1 « Le projet » (EN) | YouTube Short | 444698504 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-4909990439100266150 |
