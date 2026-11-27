@@ -8,7 +8,7 @@ from mixkit import *
 DUR, EV = events(HERE); e = lambda ty: next(x['t'] for x in EV if x['type'] == ty)
 TEST, END = e('engine'), e('card')
 N = int(DUR * SR); mix = np.zeros((N, 2)); tt = t_(DUR)[:N]; mus = track('aQkfOkFvx2U')
-place(mix, mus, 7.72 - TEST, 0, DUR, .5, .05, 1.6)
+place(mix, mus, 0, TEST - 7.72, DUR - (TEST - 7.72), .5, .05, 1.6)   # track 0 at film .08: its drop (7.72) on film 7.8
 room = bp(noise(DUR), 100, 600)[:N]; add(mix, norm(room), 0, .01)
 for x in EV:
     ty = x['type']
