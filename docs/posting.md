@@ -10,7 +10,7 @@ planificateur Metricool avant son heure (lien `plannerUrl` donné à chaque fois
 |---|---|---|
 | TikTok | study_lock.in | oui, en français |
 | Facebook | page 1426570190546010 | oui, en Reel, en français |
-| YouTube | @welockin-students (UCESYUmes8WTPj_a0-2hPmYw) | oui, en Short, **en anglais** (public anglophone) |
+| YouTube | @welockin-students (UCESYUmes8WTPj_a0-2hPmYw) | oui, en Short, **toujours en anglais** (public anglophone ; jamais de français, 28/11) |
 | Instagram | welock.in | oui, en Reel, en français (autorisé par le client le 26/11) |
 | comptes perso (TikTok « Hedi Fourati », Threads), LinkedIn | — | **jamais** sans demande explicite |
 
