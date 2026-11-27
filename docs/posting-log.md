@@ -20,3 +20,5 @@
 | 2026-11-28 20:00 | video-36 v1 « Le stage » (EN) | YouTube Short | 443849971 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=1646527402137045445 |
 | 2026-11-28 23:00 | video-37 v1 « L'été » (FR) | TikTok, Facebook Reel, Instagram Reel | 443969308 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-4160733531477688305 |
 | 2026-11-28 23:00 | video-37 v1 « L'été » (EN) | YouTube Short | 443969334 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=2989129133824952587 |
+| 2026-11-29 08:00 | video-38 v1 « Erasmus » (FR) | TikTok, Facebook Reel, Instagram Reel | 444157629 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=915047623717700531 |
+| 2026-11-29 08:00 | video-38 v1 « Erasmus » (EN) | YouTube Short | 444157660 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-2040670661131286131 |

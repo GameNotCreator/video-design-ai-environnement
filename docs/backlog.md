@@ -16,7 +16,7 @@ de perte sur 3 épisodes, le dire au client et proposer autre chose.
 | 3 | Le stage | la veille de l'entretien : scrolle / prépare ses notes devant le miroir ; entretien : il bafouille / « Bienvenue dans l'équipe » | fait (video-36), programmé 28/11 20:00 |
 | 4 | L'été | serviette de plage et téléphone / guitare ; à la rentrée, en bas il joue à la soirée, en haut il le filme | fait (video-37), programmé 28/11 23:00 |
 | 6 | Le permis | soirées de code : scrolle / révise ; examen : recalé / il brandit son permis | à faire |
-| 7 | Erasmus | six mois avant le départ : scrolle / apprend l'espagnol ; à Madrid : montre le menu du doigt / discute avec les gens | en cours (video-38), créneau 29/11 08:00 |
+| 7 | Erasmus | six mois avant le départ : scrolle / apprend l'espagnol ; à Madrid : montre le menu du doigt / discute avec les gens | fait (video-38), programmé 29/11 08:00 |
 | 8 | Le projet | ses soirées : scrolle / code son appli ; un an après : regarde le lancement d'une appli sur son téléphone / c'est son appli | à faire |
 | 9 | Janvier (résolutions) | la même liste le 1er janvier ; en juin : jaunie / tout est coché — **à programmer entre le 28/12 et le 02/01** | à faire (date fixe) |
 | 10 | La coloc | dimanche soir : scrolle dans le canapé / fait le ménage et cuisine ; lundi : vaisselle empilée, coloc fâchée / coloc qui l'invite à dîner | à faire |
