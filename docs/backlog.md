@@ -18,11 +18,12 @@ de perte sur 3 épisodes, le dire au client et proposer autre chose.
 | 6 | Le permis | soirées de code : scrolle / révise ; examen : recalé / il brandit son permis | fait (video-39), programmé 29/11 11:00 |
 | 7 | Erasmus | six mois avant le départ : scrolle / apprend l'espagnol ; à Madrid : montre le menu du doigt / discute avec les gens | fait (video-38), programmé 29/11 08:00 |
 | 8 | Le projet | ses soirées : scrolle / code son appli ; un an après : regarde le lancement d'une appli sur son téléphone / c'est son appli | fait (video-40), programmé 29/11 14:00 |
+| 22 | Le petit frère | il avait promis de l'aider pour ses devoirs : scrolle / téléphone verrouillé, ils font les devoirs ; le bulletin du petit frère : déçu / fier, il court lui montrer | à faire — **en premier** (28/11) : viser **dimanche 29/11 20:00** ; hook = question au spectateur « T'as promis quoi à ton petit frère ce week-end ? » (hypothèse Le sommeil, `docs/performance-notes.md`) |
+| 13 | Le job étudiant | le matin du premier jour : scrolle au lit, en retard / prêt à l'heure ; le soir : viré / premier salaire | à faire — **en deuxième** (28/11) : viser **dimanche 29/11 23:00** (la veille du premier jour, à l'heure où on scrolle au lit) ; hook « T'as mis combien de réveils pour demain ? » |
 | 9 | Janvier (résolutions) | la même liste le 1er janvier ; en juin : jaunie / tout est coché — **à programmer entre le 28/12 et le 02/01** | à faire (date fixe) |
 | 10 | La coloc | dimanche soir : scrolle dans le canapé / fait le ménage et cuisine ; lundi : vaisselle empilée, coloc fâchée / coloc qui l'invite à dîner | fait (video-42), programmé 28/11 11:00 |
 | 11 | Le mémoire | les mois de rédaction : scrolle / écrit ; soutenance : page blanche, jury perplexe / applaudissements | à faire |
 | 12 | Le concours | préparation d'un concours (médecine, école) : scrolle / révise ; résultats : nom absent / nom sur la liste | à faire |
-| 13 | Le job étudiant | le matin du premier jour : scrolle au lit, en retard / prêt à l'heure ; le soir : viré / premier salaire | à faire |
 | 14 | La musique | les soirées : scrolle / pratique le piano ; un an après : regarde des covers / joue devant ses amis | à faire |
 | 15 | Le sommeil | 23 h : scrolle jusqu'à 3 h / téléphone verrouillé, dort ; le matin : zombie en amphi / frais et réveillé | fait (video-41), programmé 27/11 23:00 (demande du client) |
 | 16 | Les amis | samedi : scrolle seul dans sa chambre / téléphone verrouillé, sort avec ses amis ; dimanche : photos des autres / il est sur les photos — choisi le 28/11 : les deux meilleures sur TikTok sont des histoires de lien (Premier rendez-vous, Le sommeil) | fait (video-45), programmé 29/11 17:00 (YouTube EN 01/12 02:00) |
@@ -31,5 +32,4 @@ de perte sur 3 épisodes, le dire au client et proposer autre chose.
 | 19 | L'exposé de groupe | la veille : scrolle / prépare sa partie ; à l'oral : il lit ses notes en bafouillant, le groupe gêné / il présente, le groupe le félicite | à faire |
 | 20 | La course | trois mois d'entraînement : scrolle / court ; le jour J : abandonne au 5e km / passe la ligne, ses amis l'attendent | à faire |
 | 21 | Le dessin | les soirées : scrolle / dessine ; un an après : regarde des artistes / ses dessins exposés à la fête de la fac | à faire |
-| 22 | Le petit frère | il avait promis de l'aider pour ses devoirs : scrolle / téléphone verrouillé, ils font les devoirs ; le bulletin du petit frère : déçu / fier, il court lui montrer | à faire |
 | 5 | La salle de sport | scrolle entre les séries / s'entraîne ; six mois après, la différence se voit | à faire (descendue le 27/11 : règle « objet ou système » de `docs/performance-notes.md`) |

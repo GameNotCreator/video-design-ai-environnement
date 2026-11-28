@@ -1,6 +1,6 @@
 # Ce qui marche — stats réelles et règles qui en découlent
 
-Mise à jour : **2026-11-25**. Deux sources :
+Mise à jour : **2026-11-28** (relevé quotidien, `docs/analyse.md`). Au départ (25/11), Deux sources :
 - **stats privées Windsor.ai** (TikTok Studio + YouTube Studio : rétention seconde par seconde, pays, sources de
   trafic) → `docs/stats/2026-11-25/windsor_*.csv`, procédure `docs/stats/windsor.md` ;
 - stats publiques (`python3 tools/stats.py`) → `docs/stats/2026-11-25/youtube.csv`, `tiktok.csv`.
@@ -12,11 +12,36 @@ Limites : petits volumes (quelques centaines de vues), une vidéo par concept. C
 des lois. Une vidéo de moins de 48 h n'est pas encore jugée (video-17, video-22 au 25/11). Les chiffres YouTube de
 Windsor ont ~2 jours de retard (video-26 Mirror n'y a que 143 vues).
 
-## Signal du client, 28/11 matin : 1 200 vues sur Instagram
+## Relevé du 28/11 (12:50) : la vidéo à 1 200 vues sur Instagram, c'est « Le sommeil » (série)
 
-Le client voit **1 200 vues sur une vidéo Instagram** (welock.in). Metricool ne la montre pas encore à 09:50 (ses
-données ont environ un jour de retard). À identifier à l'analyse de 12:47 (quelle vidéo, quel concept, quel créneau),
-puis en faire plus du même type : Instagram devient une plateforme à suivre de près, pas seulement TikTok et YouTube.
+Sources : Metricool (Instagram, Facebook ; son TikTok n'a toujours qu'un post, son YouTube n'a pas de chiffres),
+stats publiques (TikTok `study_lock.in`, YouTube), Windsor (YouTube, 2 jours de retard : pas encore la série EN).
+Détail : `docs/stats/evolution.md`, `docs/stats/2026-11-28/`. Aucune vidéo FR n'a encore 48 h : rien n'est jugé.
+
+| Vidéo (âge) | TikTok | Instagram (skip < 3 s, temps moyen) | Facebook | YouTube EN |
+|---|---:|---|---:|---:|
+| **video-41 Le sommeil** (14 h) | **379** | **1 287** (26 likes, 4 saves ; skip **32,9 %**, **10,1 s**) | 193 | 939 |
+| video-35 Premier rendez-vous (29 h) | 391 | 149 (skip 47,1 %, 6,7 s) | 152 | 989 |
+| video-34 Partiels (5 h) | **2** | 179 (skip 44,7 %, 7,6 s) | 238 | 1 009 (11 h) |
+| video-42 La coloc (2 h) | 25 | 1 | 0 | 955 (9 h) |
+| video-26 Mirror, remake (23 h) | 342 | 175 (skip 39,9 %) | 199 | – |
+| video-9 Surgeon, remake (17 h) | 101 | 191 (skip 50,6 %) | 198 | – |
+| video-20 Fetch, remake (20 h) | 103 | 146 (skip 42,6 %) | 249 | – |
+| video-33 Fais un vœu, perte (38 h) | 341 | 214 (skip 72,8 %, 4,3 s) | 196 | – |
+| video-31 Premiers pas, perte (26 h) | 117 | 20 (skip 71,4 %, 3,3 s) | 220 | – |
+
+- **Le sommeil gagne partout où l'algorithme choisit** : 1 287 vues Instagram (6 à 9 fois les autres), le plus bas
+  skip (32,9 %) et le plus long temps moyen (10,1 s sur 24 s) ; 379 vues TikTok en 14 h (le meilleur rythme). Ce qu'elle a
+  de différent : (1) le hook est **une question sur la vie du spectateur** (« t'as dormi à quelle heure hier ? ») et pas
+  un « Haut ou bas ? » générique ; (2) **le sujet tombe à son heure** : une vidéo sur le scroll de 23 h, publiée à 23 h,
+  devant des gens qui scrollent au lit. Une seule vidéo : hypothèse, pas règle (test ci-dessous).
+- **Les histoires de perte perdent dès la frame 0 sur Instagram** : skip 71–73 % (Premiers pas, Fais un vœu) contre
+  33–47 % pour la série et 40–51 % pour les remakes. À confirmer à 48 h, mais le sens est net.
+- **Partiels bloqué sur TikTok** : 2 vues en 5 h (179 sur Instagram, 238 sur Facebook au même âge). Pas une question de
+  contenu, sans doute un post retenu chez TikTok (vérification ou doublon). À regarder au prochain relevé.
+- **YouTube EN : ~1 000 vues par Short en moins de 12 h, puis plat** (Premier rendez-vous 905 à 5 h, 989 à 29 h). Les
+  quatre épisodes EN sont entre 939 et 1 009 : le créneau de nuit (02:00, 04:00) fait aussi bien que 08:00 et 23:00.
+- **Facebook** : 150–250 vues par Reel quel que soit le contenu, temps moyen 2–6 s : pas de signal, on ne le juge pas.
 
 ## Relevé du 27/11 (12:50) : premier épisode de la série en ligne depuis 5 h (pas encore jugé)
 
@@ -212,6 +237,11 @@ Historique (20/11) : le pixel 2.5D écrase le motion design plat (48 vues contre
 - **Légende** : une question fermée ou un aveu (« Tag the friend who… », « Be honest: yes or no? ») plutôt qu'une
   question ouverte ; épingler un commentaire.
 - **Cover** : régler à la main la miniature sur le poster (frame 0) sur chaque plateforme.
+- **Hook = une question sur la vie du spectateur, sujet à son heure (hypothèse du 28/11, à tester)** : Le sommeil
+  (« t'as dormi à quelle heure hier ? », publié à 23 h) fait 1 287 vues Instagram contre 149–214 pour les autres. À tester
+  sur deux vidéos (Le petit frère dimanche 20:00 « T'as promis quoi à ton petit frère ce week-end ? », Le job étudiant
+  dimanche 23:00 « T'as mis combien de réveils pour demain ? ») ; si elles battent la moyenne de la série au même âge,
+  c'est une règle.
 - **Cadence (hypothèse à tester)** : 1 vidéo par jour et par plateforme plutôt que 3–4 ; les vues TikTok baissent depuis
   qu'on publie plusieurs vidéos par jour.
 - **Mesurer chaque vidéo à 48 h** (Windsor) : TikTok `ret_1s`, `ret_2s`, `avg_watch_ratio` ; YouTube `avg_view_pct` et

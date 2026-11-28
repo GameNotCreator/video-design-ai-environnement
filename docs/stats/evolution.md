@@ -29,3 +29,34 @@ Metricool ; Instagram et Facebook = Metricool ; YouTube = stats publiques + Wind
 | 28/11 10:40 | video-34 Partiels (série) | TikTok | FR | 08:00 | 3 | 2 | 0 | 0 | 0 | 0 | – | – |
 | 28/11 10:40 | video-35 Premier rendez-vous (série) | YouTube | EN | 08:00 (27/11) | 27 | **989** | 10 | – | – | – | – | – |
 | 28/11 10:40 | (Instagram : Metricool n'a pas de nouvelles données depuis le 27/11 ; le client voit 1 200 vues sur une vidéo) | Instagram | FR | – | – | – | – | – | – | – | – | – |
+| 28/11 12:50 | video-35 Premier rendez-vous (série) | TikTok | FR | 08:00 (27/11) | 29 | 391 | 10 | 0 | 0 | 0 | – | – |
+| 28/11 12:50 | video-41 Le sommeil (série) | TikTok | FR | 23:00 (27/11) | 14 | **379** | 5 | 0 | 1 | 0 | – | – |
+| 28/11 12:50 | video-26 Mirror (remake FR) | TikTok | FR | 14:00 (27/11) | 23 | 342 | 11 | 0 | 1 | 0 | – | – |
+| 28/11 12:50 | video-33 Fais un vœu | TikTok | FR | 22:25 (26/11) | 38 | 341 | 3 | 0 | 0 | 1 | – | – |
+| 28/11 12:50 | video-31 Premiers pas | TikTok | FR | 11:00 (27/11) | 26 | 117 | 4 | 0 | 0 | 0 | – | – |
+| 28/11 12:50 | video-20 Fetch (remake FR) | TikTok | FR | 17:00 (27/11) | 20 | 103 | 2 | 0 | 0 | 0 | – | – |
+| 28/11 12:50 | video-9 Surgeon (remake FR) | TikTok | FR | 20:00 (27/11) | 17 | 101 | 4 | 0 | 0 | 0 | – | – |
+| 28/11 12:50 | video-34 Partiels (série) | TikTok | FR | 08:00 | 5 | 2 (bloquée ?) | 0 | 0 | 0 | 0 | – | – |
+| 28/11 12:50 | video-42 La coloc (série) | TikTok | FR | 11:00 | 2 | 25 | 2 | 0 | 0 | 0 | – | – |
+| 28/11 12:50 | video-41 Le sommeil (série) | Instagram | FR | 23:00 (27/11) | 14 | **1 287** | 26 | – | 0 | 4 | skip **32,9 %** | **10,1 s** |
+| 28/11 12:50 | video-33 Fais un vœu | Instagram | FR | 22:50 (26/11) | 38 | 214 | 6 | – | 0 | 0 | skip 72,8 % | 4,3 s |
+| 28/11 12:50 | video-9 Surgeon (remake FR) | Instagram | FR | 20:00 (27/11) | 17 | 191 | 1 | – | 0 | 1 | skip 50,6 % | 6,1 s |
+| 28/11 12:50 | video-34 Partiels (série) | Instagram | FR | 08:00 | 5 | 179 | 4 | – | 0 | 1 | skip 44,7 % | 7,6 s |
+| 28/11 12:50 | video-26 Mirror (remake FR) | Instagram | FR | 14:00 (27/11) | 23 | 175 | 5 | – | 0 | 0 | skip 39,9 % | 7,5 s |
+| 28/11 12:50 | video-35 Premier rendez-vous (série) | Instagram | FR | 08:00 (27/11) | 29 | 149 | 3 | – | 0 | 0 | skip 47,1 % | 6,7 s |
+| 28/11 12:50 | video-20 Fetch (remake FR) | Instagram | FR | 17:00 (27/11) | 20 | 146 | 2 | – | 0 | 0 | skip 42,6 % | 5,4 s |
+| 28/11 12:50 | video-31 Premiers pas | Instagram | FR | 11:00 (27/11) | 26 | 20 | 2 | – | 0 | 0 | skip 71,4 % | 3,3 s |
+| 28/11 12:50 | video-42 La coloc (série) | Instagram | FR | 11:00 | 2 | 1 | 0 | – | 0 | 0 | – | – |
+| 28/11 12:50 | video-20 Fetch (remake FR) | Facebook | FR | 17:00 (27/11) | 20 | 249 | 5 | – | – | – | – | 4 s |
+| 28/11 12:50 | video-34 Partiels (série) | Facebook | FR | 08:00 | 5 | 238 | 2 | – | – | – | – | 6 s |
+| 28/11 12:50 | video-31 Premiers pas | Facebook | FR | 11:00 (27/11) | 26 | 220 | 2 | – | – | – | – | 4 s |
+| 28/11 12:50 | video-26 Mirror (remake FR) | Facebook | FR | 14:00 (27/11) | 23 | 199 | 1 | – | – | – | – | 5 s |
+| 28/11 12:50 | video-9 Surgeon (remake FR) | Facebook | FR | 20:00 (27/11) | 17 | 198 | 1 | – | – | – | – | 2 s |
+| 28/11 12:50 | video-33 Fais un vœu | Facebook | FR | 22:25 (26/11) | 38 | 196 | 2 | – | – | – | – | 2 s |
+| 28/11 12:50 | video-41 Le sommeil (série) | Facebook | FR | 23:00 (27/11) | 14 | 193 | 2 | – | – | – | – | 5 s |
+| 28/11 12:50 | video-35 Premier rendez-vous (série) | Facebook | FR | 08:00 (27/11) | 29 | 152 | 1 | – | – | – | – | 4 s |
+| 28/11 12:50 | video-42 La coloc (série) | Facebook | FR | 11:00 | 2 | 0 | 0 | – | – | – | – | – |
+| 28/11 12:50 | video-34 Partiels (série) | YouTube | EN | 02:00 | 11 | **1 009** | 8 | – | – | – | – | – |
+| 28/11 12:50 | video-35 Premier rendez-vous (série) | YouTube | EN | 08:00 (27/11) | 29 | 989 | 10 | – | – | – | – | – |
+| 28/11 12:50 | video-42 La coloc (série) | YouTube | EN | 04:00 | 9 | 955 | 10 | – | – | – | – | – |
+| 28/11 12:50 | video-41 Le sommeil (série) | YouTube | EN | 23:00 (27/11) | 14 | 939 | 9 | – | – | – | – | – |
