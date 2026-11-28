@@ -34,3 +34,5 @@
 | 2026-11-30 04:00 (nuit, public US) | video-43 v1 « Le chien » (EN) | YouTube Short | 445073050 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=5279867270860195575 |
 | 2026-11-28 17:00 | video-44 v1 « Mamie » (FR) | TikTok, Facebook Reel, Instagram Reel | 445173127 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-2547067531575931123 |
 | 2026-12-01 00:00 (nuit, public US) | video-44 v1 « Mamie » (EN) | YouTube Short | 445173147 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-3463489665044299055 |
+| 2026-11-29 17:00 | video-45 v1 « Les amis » (FR) | TikTok, Facebook Reel, Instagram Reel | 445298048 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=7660846176562005112 |
+| 2026-12-01 02:00 (nuit, public US) | video-45 v1 « Les amis » (EN) | YouTube Short | 445298089 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=-4933401471382765358 |
