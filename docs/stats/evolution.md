@@ -19,3 +19,13 @@ Metricool ; Instagram et Facebook = Metricool ; YouTube = stats publiques + Wind
 | 27/11 12:50 | video-31 Premiers pas | YouTube | FR | 00:05 (26/11) | 37 | 306 | 9 | – | – | – | – | – |
 | 27/11 12:50 | video-17 Class of (repère EN) | YouTube | EN | 09:14 (25/11) | 52 | 785 | 15 | – | – | – | – | – |
 | 27/11 12:50 | Facebook, 16 vidéos EN du 20 au 25/11 (repère) | Facebook | EN | divers | 50–175 | 116–282 (médiane ≈ 220) | 0–4 | – | – | – | – | 1–9 s (Mirror 9 s) |
+| 28/11 10:40 | video-35 Premier rendez-vous (série) | TikTok | FR | 08:00 (27/11) | 27 | **391** | 10 | 0 | 0 | 0 | – | – |
+| 28/11 10:40 | video-41 Le sommeil (série) | TikTok | FR | 23:00 (27/11) | 11 | **311** | 5 | 0 | 1 | 0 | – | – |
+| 28/11 10:40 | video-33 Fais un vœu | TikTok | FR | 22:25 (26/11) | 37 | 341 | 3 | 0 | 0 | 1 | – | – |
+| 28/11 10:40 | video-26 Mirror (remake FR) | TikTok | FR | 14:00 (27/11) | 20 | 278 | 7 | 0 | 1 | 0 | – | – |
+| 28/11 10:40 | video-31 Premiers pas | TikTok | FR | 11:00 (27/11) | 23 | 112 | 4 | 0 | 0 | 0 | – | – |
+| 28/11 10:40 | video-20 Fetch (remake FR) | TikTok | FR | 17:00 (27/11) | 17 | 97 | 2 | 0 | 0 | 0 | – | – |
+| 28/11 10:40 | video-9 Surgeon (remake FR) | TikTok | FR | 20:00 (27/11) | 14 | 89 | 2 | 0 | 0 | 0 | – | – |
+| 28/11 10:40 | video-34 Partiels (série) | TikTok | FR | 08:00 | 3 | 2 | 0 | 0 | 0 | 0 | – | – |
+| 28/11 10:40 | video-35 Premier rendez-vous (série) | YouTube | EN | 08:00 (27/11) | 27 | **989** | 10 | – | – | – | – | – |
+| 28/11 10:40 | (Instagram : Metricool n'a pas de nouvelles données depuis le 27/11 ; le client voit 1 200 vues sur une vidéo) | Instagram | FR | – | – | – | – | – | – | – | – | – |
