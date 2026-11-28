@@ -26,4 +26,10 @@ de perte sur 3 épisodes, le dire au client et proposer autre chose.
 | 14 | La musique | les soirées : scrolle / pratique le piano ; un an après : regarde des covers / joue devant ses amis | à faire |
 | 15 | Le sommeil | 23 h : scrolle jusqu'à 3 h / téléphone verrouillé, dort ; le matin : zombie en amphi / frais et réveillé | fait (video-41), programmé 27/11 23:00 (demande du client) |
 | 16 | Les amis | samedi : scrolle seul dans sa chambre / téléphone verrouillé, sort avec ses amis ; dimanche : photos des autres / il est sur les photos | à faire |
+| 17 | Le chien | le soir : scrolle, le chien attend sa balade, laisse dans la gueule / téléphone verrouillé, balade, jeux ; six mois après : chien qui a grossi, triste à la porte / chien en forme, tout le monde sort — règle « un être vivant qui attend » | en cours (video-43), créneau 28/11 14:00 |
+| 18 | Mamie | dimanche, il avait promis de passer : scrolle « j'arrive dans 5 min » / téléphone verrouillé, il y va, ils font un gâteau ; le soir : Mamie seule devant deux assiettes / ils rient en mangeant le gâteau — règle « un être vivant qui attend » | à faire |
+| 19 | L'exposé de groupe | la veille : scrolle / prépare sa partie ; à l'oral : il lit ses notes en bafouillant, le groupe gêné / il présente, le groupe le félicite | à faire |
+| 20 | La course | trois mois d'entraînement : scrolle / court ; le jour J : abandonne au 5e km / passe la ligne, ses amis l'attendent | à faire |
+| 21 | Le dessin | les soirées : scrolle / dessine ; un an après : regarde des artistes / ses dessins exposés à la fête de la fac | à faire |
+| 22 | Le petit frère | il avait promis de l'aider pour ses devoirs : scrolle / téléphone verrouillé, ils font les devoirs ; le bulletin du petit frère : déçu / fier, il court lui montrer | à faire |
 | 5 | La salle de sport | scrolle entre les séries / s'entraîne ; six mois après, la différence se voit | à faire (descendue le 27/11 : règle « objet ou système » de `docs/performance-notes.md`) |
