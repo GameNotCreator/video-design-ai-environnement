@@ -8,7 +8,9 @@ prochains scripts à faire ». Deux tâches planifiées reviennent dans la sessi
 | **Analyse quotidienne** | tous les jours à 12:47 | relevé des stats, évolution de chaque vidéo, règles, backlog, 5 lignes au client |
 | **Bilan de la semaine** | dimanche à 20:13 | semaine contre semaine, décisions de format et de cadence, scripts de la semaine suivante, rapport |
 
-Les passages de publication (toutes les 3 h, `docs/posting.md`) ne font plus de stats : ils produisent et programment.
+Les passages de publication (toutes les 3 h, `docs/posting.md`) font aussi un **relevé d'impact rapide à chaque fois**
+(demande du client le 28/11 : « n'oublie pas d'analyser ton impact à chaque fois ») : Metricool sur 4 jours, la meilleure
+vidéo de chaque plateforme, ce qu'elle a de différent, et le choix de la prochaine idée en conséquence.
 
 ## 1. Relever (chaque jour)
 

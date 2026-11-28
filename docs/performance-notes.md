@@ -12,6 +12,12 @@ Limites : petits volumes (quelques centaines de vues), une vidéo par concept. C
 des lois. Une vidéo de moins de 48 h n'est pas encore jugée (video-17, video-22 au 25/11). Les chiffres YouTube de
 Windsor ont ~2 jours de retard (video-26 Mirror n'y a que 143 vues).
 
+## Signal du client, 28/11 matin : 1 200 vues sur Instagram
+
+Le client voit **1 200 vues sur une vidéo Instagram** (welock.in). Metricool ne la montre pas encore à 09:50 (ses
+données ont environ un jour de retard). À identifier à l'analyse de 12:47 (quelle vidéo, quel concept, quel créneau),
+puis en faire plus du même type : Instagram devient une plateforme à suivre de près, pas seulement TikTok et YouTube.
+
 ## Relevé du 27/11 (12:50) : premier épisode de la série en ligne depuis 5 h (pas encore jugé)
 
 Tableau complet : `docs/stats/evolution.md`. Rien n'a 48 h : aucune règle ne change aujourd'hui.
