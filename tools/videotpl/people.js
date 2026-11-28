@@ -1,4 +1,5 @@
-// Procedural pixel people (video-31: + kneel with open arms; video-32: + earbuds; video-37: + guitar, clap, sitclap; video-38: + sitpoint) (3/4 side view facing right), one atlas per character, frames = poses.
+// Procedural pixel people (video-31: + kneel with open arms; video-32: + earbuds; video-37: + guitar, clap, sitclap; video-38: + sitpoint;
+// video-43: facing left mirrors the UVs instead of the mesh (no more dark flipped sprites), + makeDog) (3/4 side view facing right), one atlas per character, frames = poses.
 // A character is a "look" (colours, hair, outfit, accessories); poses are data (stand, walk, sit, phone, look, wave…).
 import * as THREE from 'three';
 import { PX, ramp, hex, texOf, billboard, blob } from './px.js';
@@ -196,6 +197,8 @@ export function makePerson(look, frames0) {
   const mesh = billboard(tex, FW * SPX, FH * SPX, { em, emCol: '#ffffff', emI: 2.0 });
   const root = new THREE.Group(); root.add(mesh);
   const sh = blob(.36, .5); sh.position.y = .015; root.add(sh);
+  let cur = 0, flipped = false;
+  const uv = () => { for (const t of [tex, em]) { t.repeat.x = (flipped ? -1 : 1) / n; t.offset.x = (cur + (flipped ? 1 : 0)) / n; } };
   return {
     root, mesh, shadow: sh,
     frame(name) {
@@ -203,10 +206,53 @@ export function makePerson(look, frames0) {
         const u = (CLOCK.t + id * .43) / SWIPE, k = Math.floor(u), f = (u - k) * SWIPE;
         name += `~${((k % 4) + 4) % 4}${f > SWIPE - .085 ? 2 : f > SWIPE - .17 ? 1 : 0}`;
       }
-      const i = names.indexOf(name); if (i < 0) throw new Error('frame ' + name); tex.offset.x = em.offset.x = i / n; },
-    face(cam, flip = false) { root.updateMatrixWorld(); const w = new THREE.Vector3().setFromMatrixPosition(root.matrixWorld); root.rotation.y = Math.atan2(cam.position.x - w.x, cam.position.z - w.z); mesh.scale.x = flip ? -1 : 1; },
-    local(px, py) { const v = new THREE.Vector3((px - FW / 2) * SPX * mesh.scale.x, (FH - py) * SPX, .05); v.applyAxisAngle(new THREE.Vector3(0, 1, 0), root.rotation.y); return v.add(root.position); },
+      const i = names.indexOf(name); if (i < 0) throw new Error('frame ' + name); cur = i; uv(); },
+    // facing left mirrors the texture (UVs), not the mesh: a negative scale would flip the normals and darken the sprite
+    face(cam, flip = false) { root.updateMatrixWorld(); const w = new THREE.Vector3().setFromMatrixPosition(root.matrixWorld); root.rotation.y = Math.atan2(cam.position.x - w.x, cam.position.z - w.z); flipped = flip; uv(); },
+    local(px, py) { const v = new THREE.Vector3((px - FW / 2) * SPX * (flipped ? -1 : 1), (FH - py) * SPX, .05); v.applyAxisAngle(new THREE.Vector3(0, 1, 0), root.rotation.y); return v.add(root.position); },
   };
 }
 export const WALK = { w0: { pose: 'walk', step: 0 }, w1: { pose: 'walk', step: 1, bob: -1 }, w2: { pose: 'walk', step: 2 }, w3: { pose: 'walk', step: 3, bob: -1 } };
 export const walkFrame = t => ['w0', 'w1', 'w2', 'w3'][Math.floor(t * 7) % 4];
+
+// —— a dog (side view facing right, 30 x 22 px): frames are poses { pose: 'stand'|'walk'|'sit'|'lie', step, wag, fat, leash, tongue, sad }
+const DW = 30, DH = 22;
+function drawDog(P, f) {
+  const C = R(['#3e2616', '#6a4224', '#9a6434', '#c48c4c', '#e0b070']), D = R(['#1e140c', '#3a2618', '#5a3c24']);
+  const pose = f.pose || 'stand', fat = f.fat ? 1 : 0, lie = pose === 'lie', sit = pose === 'sit';
+  const by = lie ? 5 - fat * 1.5 : 0, bx = 13, bry = (lie ? 3 : 4) + fat * 3, brx = 8 + fat * 3;
+  // legs
+  if (!lie) {
+    const st = pose === 'walk' ? (f.step ?? 0) : -1, off = st < 0 ? [0, 0, 0, 0] : [[1, -1, -1, 1], [0, 0, 0, 0], [-1, 1, 1, -1], [0, 0, 0, 0]][st];
+    const legs = sit ? [[17, 0], [19, 0]] : [[7, off[0]], [10, off[1]], [17, off[2]], [20, off[3]]];
+    legs.forEach(([lx, o], i) => { for (let y = 14 + by; y < 21; y++) for (let x = lx + o; x < lx + o + 2; x++) P.set(x, y, C(i % 2 ? .35 : .5, x, y)); P.set(lx + o, 20, D(.3, 0, 0)); P.set(lx + o + 1, 20, D(.3, 0, 0)); });
+    if (sit) P.ellipse(9, 17, 4, 3, (x, y, dx, dy) => C(.45 - dy * .2, x, y));   // haunches
+  }
+  // body
+  const cy = sit ? 13 : 12 + by, tilt = sit ? .45 : 0;
+  P.ellipse(bx, cy, brx, bry, (x, y, dx, dy) => C(.6 - (dy + tilt * dx) * .25, x, y));
+  // tail
+  const tw = f.wag ? -1 : 1, tx = bx - brx;
+  for (let k = 0; k < 5; k++) P.set(Math.round(tx - k * .6), Math.round(cy - 1 - k * (f.sad || lie ? -.3 : .9) + (k > 2 ? tw : 0)), C(.55, 0, 0));
+  // head
+  const hx = lie ? 22 : 21, hy = lie ? 14 : sit ? 5 : 6;
+  P.ellipse(hx, hy, 4.2, 3.8, (x, y, dx, dy) => C(.7 - dy * .2, x, y));
+  P.rect(hx + 3, hy + 1, 3, 2, C(.85, 0, 0)); P.set(hx + 6, hy + 1, D(.2, 0, 0));          // snout, nose
+  for (let y = hy - 4; y < hy + 1; y++) P.set(hx - 2, y + (f.sad ? 2 : 0), D(.4, 0, 0)); P.set(hx - 1, hy - 3 + (f.sad ? 2 : 0), D(.4, 0, 0));   // ear
+  if (f.sad || lie) P.set(hx + 1, hy, D(.2, 0, 0)); else { P.set(hx + 1, hy - 1, D(.1, 0, 0)); P.set(hx + 1, hy, D(.1, 0, 0)); }
+  if (f.tongue) { P.set(hx + 4, hy + 3, [214, 120, 140]); P.set(hx + 4, hy + 4, [214, 120, 140]); }
+  if (f.leash) for (let k = 0; k < 9; k++) P.set(hx + 5 + Math.round(k * .25), hy + 3 + k, [40, 60, 110]);
+}
+export function makeDog(frames0) {
+  const names = Object.keys(frames0), n = names.length, P = new PX(DW * n, DH);
+  names.forEach((k, i) => { const p1 = new PX(DW, DH); drawDog(p1, frames0[k]); p1.outline(.3); for (let y = 0; y < DH; y++) for (let x = 0; x < DW; x++) { const c = p1.get(x, y); if (c) P.set(i * DW + x, y, c); } });
+  const tex = texOf(P.done()); tex.repeat.set(1 / n, 1);
+  const mesh = billboard(tex, DW * SPX, DH * SPX, {}); const root = new THREE.Group(); root.add(mesh);
+  const sh = blob(.3, .4); sh.position.y = .015; root.add(sh);
+  let cur = 0, flipped = false; const uv = () => { tex.repeat.x = (flipped ? -1 : 1) / n; tex.offset.x = (cur + (flipped ? 1 : 0)) / n; };
+  return {
+    root, mesh, shadow: sh,
+    frame(name) { const i = names.indexOf(name); if (i < 0) throw new Error('dog frame ' + name); cur = i; uv(); },
+    face(cam, flip = false) { root.updateMatrixWorld(); const w = new THREE.Vector3().setFromMatrixPosition(root.matrixWorld); root.rotation.y = Math.atan2(cam.position.x - w.x, cam.position.z - w.z); flipped = flip; uv(); },
+  };
+}
