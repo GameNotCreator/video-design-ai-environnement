@@ -30,3 +30,5 @@
 | 2026-11-27 23:00 | video-41 v1 « Le sommeil » (EN) | YouTube Short | 444857096 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=2126156556080464432 |
 | 2026-11-28 11:00 | video-42 v1 « La coloc » (FR) | TikTok, Facebook Reel, Instagram Reel | 444919993 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=7853585301403553661 |
 | 2026-11-28 11:00 | video-42 v1 « La coloc » (EN) | YouTube Short | 444920037 → 444970825 — **déplacé au 28/11 04:00** (nuit, public US, demande du 28/11) | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=5538393432304011282 |
+| 2026-11-28 14:00 | video-43 v1 « Le chien » (FR) | TikTok, Facebook Reel, Instagram Reel | 445073035 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=4376390048175571957 |
+| 2026-11-30 04:00 (nuit, public US) | video-43 v1 « Le chien » (EN) | YouTube Short | 445073050 | https://app.metricool.com/planner/calendar?blogId=8360223&openWithPostUuid=5279867270860195575 |
